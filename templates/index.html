@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>PUBLIKCARE</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet">
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <img src="{{ url_for('static', filename='assets/img/logooo.png') }}" alt="PUBLIKCARE Logo" style="width: 120px; height: 190px;">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Beranda<br></a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn d-none d-sm-block" href="#appointment">Cek Strategi Penanganan</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <img src="{{ url_for('static', filename='assets/img/back.png') }}" alt="" data-aos="fade-in">
+
+      <div class="container position-relative">
+
+        <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
+          <h2 style="color: white;">WELCOME TO PUBLIKCARE</h2>
+        </div><!-- End Welcome -->
+
+<div class="content row gy-4">
+  <!-- Why Choose PUBLIKCARE? -->
+  <div class="col-lg-4 d-flex align-items-stretch">
+  <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
+    <h3>Kenapa Memilih PUBLIKCARE?</h3>
+    <p>
+      PUBLIKCARE memberikan strategi cepat dan tepat saat terjadi gangguan layanan publik. 
+      Mulai dari laporan masalah, saran solusi, hingga langkah preventif, semuanya tersedia di satu platform.
+    </p>
+    <div class="text-center">
+      <a href="#about" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+    </div>
+  </div>
+</div><!-- End Why Box -->
+
+<!-- Strategi Penanganan PUBLIKCARE -->
+<div class="col-lg-8 d-flex align-items-stretch">
+  <div class="d-flex flex-column justify-content-center">
+    <div class="row gy-4">
+
+      <div class="col-xl-4 d-flex align-items-stretch">
+        <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
+          <i class="bi bi-lightning-charge"></i>
+          <h4>Segera Lapor Gangguan</h4>
+          <p>Laporan gangguan dikirim langsung ke pihak berwenang agar bisa ditangani lebih cepat.</p>
+        </div>
+      </div><!-- End Icon Box -->
+
+      <div class="col-xl-4 d-flex align-items-stretch">
+        <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
+          <i class="bi bi-gear-fill"></i>
+          <h4>Solusi & Rekomendasi</h4>
+          <p>Dapatkan rekomendasi langkah penanganan yang tepat sesuai jenis gangguan yang terjadi.</p>
+        </div>
+      </div><!-- End Icon Box -->
+
+      <div class="col-xl-4 d-flex align-items-stretch">
+        <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
+          <i class="bi bi-clipboard-check"></i>
+          <h4>Pantau Status Gangguan</h4>
+          <p>Ikuti update terkini mengenai progres penanganan dan kapan layanan akan pulih normal.</p>
+        </div>
+      </div><!-- End Icon Box -->
+
+    </div>
+  </div>
+</div>
+
+</div><!-- End Content -->
+
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+   <section id="about" class="about section">
+
+  <div class="container">
+
+    <div class="row gy-4 gx-5">
+
+      <!-- Gambar ilustrasi strategi -->
+      <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
+        <img src="{{ url_for('static', filename='assets/img/about.jpg') }}" class="img-fluid rounded" alt="PUBLIKCARE Strategi">
+      </div>
+
+      <!-- Konten Strategi -->
+      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+        <h3>Tentang PUBLIKCARE</h3>
+        <p>
+          PUBLIKCARE menampilkan strategi penanganan masalah layanan publik secara cepat, tepat, dan jelas, agar masyarakat bisa langsung mengambil langkah yang sesuai.
+        </p>
+        <ul class="about-list">
+          <li>
+            <i class="bi bi-lightning-charge text-warning"></i>
+            <div>
+              <h5>Gangguan Listrik</h5>
+              <p>Strategi cepat mengatasi pemadaman atau gangguan jaringan listrik publik.</p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-water text-primary"></i>
+            <div>
+              <h5>Gangguan Air & Sanitasi</h5>
+              <p>Solusi penanganan distribusi air atau gangguan fasilitas sanitasi publik.</p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-wifi text-success"></i>
+            <div>
+              <h5>Gangguan Telekomunikasi</h5>
+              <p>Strategi pemulihan jaringan komunikasi agar masyarakat tetap terhubung.</p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-gear text-danger"></i>
+            <div>
+              <h5>Gangguan Fasilitas Umum</h5>
+              <p>Langkah-langkah penanganan fasilitas publik seperti transportasi, jalan, atau gedung umum.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+</section>
+
+
+      <!-- Section Title -->
+ <!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Layanan Kami</h2>
+    <p>Kami menyediakan berbagai layanan publik untuk mempermudah masyarakat mendapatkan informasi dan bantuan yang dibutuhkan</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Air Listrik</h3>
+          </a>
+          <p>Membantu mengenai hambatan yang ada di lingkungan rumahmu</p>
+          </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Layanan Perizinan</h3>
+          </a>
+          <p>Memberikan panduan dan bantuan untuk berbagai jenis izin, mulai dari usaha hingga lingkungan dan pembangunan.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Transportasi & Infrastruktur</h3>
+          </a>
+          <p>Menyediakan informasi dan bantuan terkait transportasi umum, fasilitas publik, dan perbaikan infrastruktur kota.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Akses Informasi Publik</h3>
+          </a>
+          <p>Menyajikan data dan informasi layanan publik secara transparan agar mudah diakses masyarakat.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Layanan Pengaduan</h3>
+          </a>
+          <p>Menyediakan saluran untuk pengaduan masyarakat agar keluhan dapat tersampaikan dan ditindaklanjuti.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Sosialisasi & Edukasi</h3>
+          </a>
+          <p>Menyebarkan informasi, panduan, dan edukasi mengenai layanan publik kepada masyarakat luas.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+</section>
+
+
+    </section><!-- /Services Section -->
+
+<!-- Penanganan Section -->
+<section id="appointment" class="appointment section" style="background: #09637E; padding: 60px 0; color: #fff;">
+  <div class="container section-title text-center" data-aos="fade-up">
+    <h2 style="color: #fff;">Penanganan Masalah Publik</h2>
+    <p>Isi form di bawah agar kami bisa memberikan strategi penanganan cepat!</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <form action="forms/appointment.php" method="post" class="php-email-form" 
+          style="max-width: 700px; margin: auto; background: #ffffff; color: #000; 
+                 padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); font-family: Arial, sans-serif;">
+      
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <label for="wilayah" style="font-weight: bold;">Wilayah</label>
+          <input type="text" name="wilayah" id="wilayah" class="form-control" placeholder="Contoh: Jakarta Selatan" required
+                 style="border-radius: 8px; border: 1px solid #00c6ff; padding: 10px;">
+        </div>
+        <div class="col-md-6">
+          <label for="layanan" style="font-weight: bold;">Layanan</label>
+          <select name="layanan" id="layanan" class="form-select" required
+                  style="border-radius: 8px; border: 1px solid #00c6ff; padding: 10px;">
+            <option value="">Pilih Layanan</option>
+            <option value="Listrik">Listrik</option>
+            <option value="Air">Air</option>
+            <option value="Sampah">Sampah</option>
+            <option value="Transportasi">Transportasi</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="gangguan" style="font-weight: bold;">Gangguan</label>
+        <textarea name="gangguan" id="gangguan" rows="3" class="form-control" placeholder="Jelaskan gangguan yang terjadi" required
+                  style="border-radius: 8px; border: 1px solid #00c6ff; padding: 10px;"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="dampak" style="font-weight: bold;">Dampak</label>
+        <textarea name="dampak" id="dampak" rows="3" class="form-control" placeholder="Jelaskan dampak gangguan" required
+                  style="border-radius: 8px; border: 1px solid #00c6ff; padding: 10px;"></textarea>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <label for="durasi" style="font-weight: bold;">Durasi</label>
+          <input type="text" name="durasi" id="durasi" class="form-control" placeholder="Contoh: 2 jam" required
+                 style="border-radius: 8px; border: 1px solid #00c6ff; padding: 10px;">
+        </div>
+        <div class="col-md-6">
+          <label for="urgensi" style="font-weight: bold;">Urgensi</label>
+          <select name="urgensi" id="urgensi" class="form-select" required
+                  style="border-radius: 8px; border: 1px solid #00c6ff; padding: 10px;">
+            <option value="Tinggi" selected>Tinggi</option>
+            <option value="Sedang">Sedang</option>
+            <option value="Rendah">Rendah</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" 
+                style="background: linear-gradient(90deg, #00c6ff, #0072ff); color: white; border: none; 
+                       padding: 12px 35px; border-radius: 25px; font-weight: bold; cursor: pointer; font-size: 1rem;
+                       transition: 0.3s;">
+          Dapatkan Strategi
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+
+    <!-- Gallery Section -->
+   <section id="gallery" class="gallery section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Gambar</h2>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-3"> <!-- g-3 = jarak antar gambar -->
+
+      <!-- Gambar 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="gallery-item overflow-hidden rounded shadow-sm">
+          <a href="{{ url_for('static', filename='assets/img/gallery/gallery-1.jpg') }}" class="glightbox" data-gallery="images-gallery">
+            <img src="{{ url_for('static', filename='assets/img/gallery/gallery-1.jpg') }}" alt="Gallery 1" class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
+          </a>
+        </div>
+      </div>
+
+      <!-- Gambar 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="gallery-item overflow-hidden rounded shadow-sm">
+          <a href="{{ url_for('static', filename='assets/img/gallery/gallery-2.jpg') }}" class="glightbox" data-gallery="images-gallery">
+            <img src="{{ url_for('static', filename='assets/img/gallery/gallery-2.jpg') }}" alt="Gallery 2" class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
+          </a>
+        </div>
+      </div>
+
+      <!-- Gambar 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="gallery-item overflow-hidden rounded shadow-sm">
+          <a href="{{ url_for('static', filename='assets/img/gallery/gallery-3.jpg') }}" class="glightbox" data-gallery="images-gallery">
+            <img src="{{ url_for('static', filename='assets/img/gallery/gallery-3.jpg') }}" alt="Gallery 3" class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
+          </a>
+        </div>
+      </div>
+
+      <!-- Gambar 4 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="gallery-item overflow-hidden rounded shadow-sm">
+          <a href="{{ url_for('static', filename='assets/img/gallery/gallery-4.jpg') }}" class="glightbox" data-gallery="images-gallery">
+            <img src="{{ url_for('static', filename='assets/img/gallery/gallery-4.jpg') }}" alt="Gallery 4" class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
+          </a>
+        </div>
+      </div>
+
+      <!-- Gambar 5 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="gallery-item overflow-hidden rounded shadow-sm">
+          <a href="{{ url_for('static', filename='assets/img/gallery/gallery-5.jpg') }}" class="glightbox" data-gallery="images-gallery">
+            <img src="{{ url_for('static', filename='assets/img/gallery/gallery-5.jpg') }}" alt="Gallery 5" class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
+          </a>
+        </div>
+      </div>
+
+      <!-- Gambar 6 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="gallery-item overflow-hidden rounded shadow-sm">
+          <a href="{{ url_for('static', filename='assets/img/gallery/gallery-6.jpg') }}" class="glightbox" data-gallery="images-gallery">
+            <img src="{{ url_for('static', filename='assets/img/gallery/gallery-6.jpg') }}" alt="Gallery 6" class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+</style>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Kontak</h2>
+    <p>Hubungi kami melalui alamat dan nomor telepon berikut</p>
+  </div><!-- End Section Title -->
+
+  <!-- Google Maps -->
+  <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+    <iframe style="border:0; width: 100%; height: 270px;"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31689.098499645745!2d107.53620631439529!3d-6.874146452347952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e43bfb586e63%3A0xeb60b3e4f74f8ea8!2sCibabat%2C%20Cimahi%20Utara%2C%20Cimahi%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1769678140698!5m2!1sen!2sid">
+    </iframe>
+  </div><!-- End Google Maps -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+
+      <div class="col-lg-6">
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-geo-alt flex-shrink-0"></i>
+          <div>
+            <h3>Alamat</h3>
+            <p>Jalan Raya Amir Mahmud GG Sukawargi V RT4 RW 01</p>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-telephone flex-shrink-0"></i>
+          <div>
+            <h3>Telepon</h3>
+            <p>0896 5570 4544</p>
+          </div>
+        </div><!-- End Info Item -->
+        
+      </div><!-- End Contact Info -->
+
+    </div>
+  </div>
+</section>
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+<footer id="footer" class="footer light-background">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+
+      <!-- Tentang PublikCare -->
+      <div class="col-lg-4 col-md-6 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename">PublikCare</span>
+        </a>
+        <div class="footer-contact pt-3">
+          <p>Jalan Raya Amir Mahmud GG Sukawargi V</p>
+          <p class="mt-3"><strong>Telepon:</strong> <span>0896 5570 4544</span></p>
+        </div>
+        <div class="social-links d-flex mt-4">
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div><!-- End Tentang PublikCare -->
+
+      <!-- Menu -->
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Tautan</h4>
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Tentang</a></li>
+          <li><a href="#">Layanan</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- Layanan -->
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#">Pengaduan Masyarakat</a></li>
+          <li><a href="#">Informasi Publik</a></li>
+          <li><a href="#">Permohonan Dokumen</a></li>
+          <li><a href="#">Bantuan Online</a></li>
+        </ul>
+      </div>
+
+      <!-- Lainnya -->
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Informasi</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Syarat & Ketentuan</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Dukungan</h4>
+        <ul>
+          <li><a href="#">Panduan Pengguna</a></li>
+          <li><a href="#">Kontak Bantuan</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="container copyright text-center mt-4">
+    <p>© <span></span> <strong class="px-1 sitename">PublikCare</strong> <span>All Rights Reserved</span></p>
+    <div class="credits">
+      Designed by Kelompok 5
+    </div>
+  </div>
+
+</footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+
+  <!-- Main JS File -->
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+
+</html>
