@@ -106,40 +106,41 @@
             </div>
           </div><!-- End Why Box -->
 
-          <!-- Strategi Penanganan PUBLIKCARE -->
-          <div class="col-lg-8 d-flex align-items-stretch">
-            <div class="d-flex flex-column justify-content-center">
-              <div class="row gy-4">
+        <!-- Strategi Penanganan PUBLIKCARE -->
+<div class="col-lg-8">
+  <div class="row gy-4">
 
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
-                    <i class="bi bi-lightning-charge"></i>
-                    <h4>Segera Lapor Gangguan</h4>
-                    <p>Laporan gangguan dikirim langsung ke pihak berwenang agar bisa ditangani lebih cepat.</p>
-                  </div>
-                </div><!-- End Icon Box -->
+    <!-- Box 1 -->
+    <div class="col-xl-6 d-flex">
+      <div class="icon-box d-flex flex-column h-140 text-center p-4" data-aos="zoom-out" data-aos-delay="800">
+        <div class="mb-8">
+          <i class="bi bi-gear-fill fs-1"></i>
+        </div>
+        <h4>Solusi & Rekomendasi</h4>
+        <p class="flex-grow-1">
+          Dapatkan rekomendasi langkah penanganan yang tepat sesuai jenis gangguan yang terjadi.
+        </p>
+      </div>
+    </div>
 
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
-                    <i class="bi bi-gear-fill"></i>
-                    <h4>Solusi & Rekomendasi</h4>
-                    <p>Dapatkan rekomendasi langkah penanganan yang tepat sesuai jenis gangguan yang terjadi.</p>
-                  </div>
-                </div><!-- End Icon Box -->
+    <!-- Box 2 -->
+    <div class="col-xl-6 d-flex">
+      <div class="icon-box d-flex flex-column h-100 text-center p-4" data-aos="zoom-out" data-aos-delay="500">
+        <div class="mb-3">
+          <i class="bi bi-clipboard-check fs-1"></i>
+        </div>
+        <h4>Pantau Status Gangguan</h4>
+        <p class="flex-grow-1">
+          Ikuti update terkini mengenai progres penanganan dan kapan layanan akan pulih normal.
+        </p>
+      </div>
+    </div>
 
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
-                    <i class="bi bi-clipboard-check"></i>
-                    <h4>Pantau Status Gangguan</h4>
-                    <p>Ikuti update terkini mengenai progres penanganan dan kapan layanan akan pulih normal.</p>
-                  </div>
-                </div><!-- End Icon Box -->
+  </div>
+</div>
 
-              </div>
-            </div>
-          </div>
 
-        </div><!-- End Content -->
+
 
 
     </section><!-- /Hero Section -->
@@ -177,13 +178,6 @@
                 <div>
                   <h5>Gangguan Air & Sanitasi</h5>
                   <p>Solusi penanganan distribusi air atau gangguan fasilitas sanitasi publik.</p>
-                </div>
-              </li>
-              <li>
-                <i class="bi bi-wifi text-success"></i>
-                <div>
-                  <h5>Gangguan Telekomunikasi</h5>
-                  <p>Strategi pemulihan jaringan komunikasi agar masyarakat tetap terhubung.</p>
                 </div>
               </li>
               <li>
@@ -226,43 +220,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fas fa-handshake"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Layanan Perizinan</h3>
-              </a>
-              <p>Memberikan panduan dan bantuan untuk berbagai jenis izin, mulai dari usaha hingga lingkungan dan
-                pembangunan.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fas fa-truck"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Transportasi & Infrastruktur</h3>
-              </a>
-              <p>Menyediakan informasi dan bantuan terkait transportasi umum, fasilitas publik, dan perbaikan
-                infrastruktur kota.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fas fa-globe"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Akses Informasi Publik</h3>
-              </a>
-              <p>Menyajikan data dan informasi layanan publik secara transparan agar mudah diakses masyarakat.</p>
-            </div>
-          </div><!-- End Service Item -->
+          
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-item position-relative">
@@ -365,84 +323,7 @@
     </section>
 
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Gambar</h2>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-3"> <!-- g-3 = jarak antar gambar -->
-
-          <!-- Gambar 1 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="gallery-item overflow-hidden rounded shadow-sm">
-              <a href="{{ url_for('static', filename='assets/img/gallery/gallery-1.jpg') }}" class="glightbox"
-                data-gallery="images-gallery">
-                <img src="{{ url_for('static', filename='assets/img/gallery/gallery-1.jpg') }}" alt="Gallery 1"
-                  class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
-              </a>
-            </div>
-          </div>
-
-          <!-- Gambar 2 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="gallery-item overflow-hidden rounded shadow-sm">
-              <a href="{{ url_for('static', filename='assets/img/gallery/gallery-2.jpg') }}" class="glightbox"
-                data-gallery="images-gallery">
-                <img src="{{ url_for('static', filename='assets/img/gallery/gallery-2.jpg') }}" alt="Gallery 2"
-                  class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
-              </a>
-            </div>
-          </div>
-
-          <!-- Gambar 3 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="gallery-item overflow-hidden rounded shadow-sm">
-              <a href="{{ url_for('static', filename='assets/img/gallery/gallery-3.jpg') }}" class="glightbox"
-                data-gallery="images-gallery">
-                <img src="{{ url_for('static', filename='assets/img/gallery/gallery-3.jpg') }}" alt="Gallery 3"
-                  class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
-              </a>
-            </div>
-          </div>
-
-          <!-- Gambar 4 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="gallery-item overflow-hidden rounded shadow-sm">
-              <a href="{{ url_for('static', filename='assets/img/gallery/gallery-4.jpg') }}" class="glightbox"
-                data-gallery="images-gallery">
-                <img src="{{ url_for('static', filename='assets/img/gallery/gallery-4.jpg') }}" alt="Gallery 4"
-                  class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
-              </a>
-            </div>
-          </div>
-
-          <!-- Gambar 5 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="gallery-item overflow-hidden rounded shadow-sm">
-              <a href="{{ url_for('static', filename='assets/img/gallery/gallery-5.jpg') }}" class="glightbox"
-                data-gallery="images-gallery">
-                <img src="{{ url_for('static', filename='assets/img/gallery/gallery-5.jpg') }}" alt="Gallery 5"
-                  class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
-              </a>
-            </div>
-          </div>
-
-          <!-- Gambar 6 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="gallery-item overflow-hidden rounded shadow-sm">
-              <a href="{{ url_for('static', filename='assets/img/gallery/gallery-6.jpg') }}" class="glightbox"
-                data-gallery="images-gallery">
-                <img src="{{ url_for('static', filename='assets/img/gallery/gallery-6.jpg') }}" alt="Gallery 6"
-                  class="img-fluid" style="height:250px; width:100%; object-fit:cover; transition: transform 0.3s;">
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
+  
 
     <style>
       .gallery-item img:hover {
@@ -467,27 +348,34 @@
         </iframe>
       </div><!-- End Google Maps -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
+     <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="row gy-4">
 
-          <div class="col-lg-6">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Alamat</h3>
-                <p>Jalan Raya Amir Mahmud GG Sukawargi V RT4 RW 01</p>
-              </div>
-            </div><!-- End Info Item -->
+    <div class="col-lg-6">
 
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Telepon</h3>
-                <p>0896 5570 4544</p>
-              </div>
-            </div><!-- End Info Item -->
+      <!-- Alamat -->
+      <div class="info-item d-flex align-items-start mb-4" data-aos="fade-up" data-aos-delay="300">
+        <i class="bi bi-geo-alt me-3 fs-4"></i>
+        <div>
+          <h5 class="mb-1">Alamat</h5>
+          <p class="mb-0">Jalan Raya Amir Mahmud GG Sukawargi V RT 04 RW 01</p>
+        </div>
+      </div>
 
-          </div><!-- End Contact Info -->
+      <!-- Telepon -->
+      <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="400">
+        <i class="bi bi-telephone me-3 fs-4"></i>
+        <div>
+          <h5 class="mb-1">Telepon</h5>
+          <p class="mb-0">0896 5570 4544</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
 
         </div>
       </div>

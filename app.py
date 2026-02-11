@@ -3,7 +3,6 @@ import json
 
 app = Flask(__name__)
 
-# Load issues data globally
 def load_issues_data():
     try:
         with open('static/issues.json', 'r', encoding='utf-8') as f:
@@ -33,7 +32,6 @@ def calculate_weighting(jumlah_warga, durasi, jenis_masalah):
     try:
         jumlah = int(jumlah_warga) if jumlah_warga else 0
         if jumlah > 0:
-            # Skala: < 50 = 0.2, 50-100 = 0.4, 100-500 = 0.6, 500-1000 = 0.8, > 1000 = 1.0
             if jumlah < 50:
                 poin += 0.2
             elif jumlah < 100:
@@ -53,7 +51,7 @@ def calculate_weighting(jumlah_warga, durasi, jenis_masalah):
         if durasi_jam > 0:
             # Skala: < 2 jam = 0.2, 2-6 jam = 0.4, 6-12 jam = 0.6, 12-24 jam = 0.8, > 24 jam = 1.0
             if durasi_jam < 2:
-                poin += 0.2
+                poin += 0.2 
             elif durasi_jam < 6:
                 poin += 0.4
             elif durasi_jam < 12:
@@ -69,7 +67,7 @@ def calculate_weighting(jumlah_warga, durasi, jenis_masalah):
     # Beberapa jenis masalah memiliki severity lebih tinggi
     high_severity_keywords = [
         'rusak', 'danger', 'emergency', 'darurat', 'ilegal', 'parah',
-        'terkelupas', 'electrocution', 'keselamatan', 'kritis', 'tidak-layak'
+        'terkelupas', 'keselamatan', 'kritis', 'tidak-layak'
     ]
     
     jenis_lower = jenis_masalah.lower() if jenis_masalah else ""
@@ -85,12 +83,6 @@ def calculate_weighting(jumlah_warga, durasi, jenis_masalah):
 
 
 def determine_severity(poin):
-    """
-    Tentukan tingkat keparahan berdasarkan poin:
-    - 0 < poin <= 1: ringan
-    - 1 < poin <= 2: sedang
-    - 2 < poin <= 3: berat
-    """
     if poin <= 1:
         return "ringan"
     elif poin <= 2:
@@ -100,9 +92,6 @@ def determine_severity(poin):
 
 
 def get_tips_for_category_severity(category, severity):
-    """
-    Ambil tips umum untuk kategori dan tingkat keparahan
-    """
     if not issues_data:
         return []
     
@@ -118,9 +107,6 @@ def get_tips_for_category_severity(category, severity):
 
 
 def get_specific_issue_tips(category, issue_type):
-    """
-    Ambil tips spesifik untuk jenis masalah tertentu
-    """
     if not issues_data:
         return None
     
@@ -134,9 +120,6 @@ def get_specific_issue_tips(category, issue_type):
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    """
-    Handler untuk form submission dengan rule-based expert system
-    """
     try:
         # Ambil data dari form
         kategori_layanan = request.form.get('mainCategory', '').strip()
