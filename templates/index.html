@@ -289,19 +289,9 @@
 
           <div class="mb-4">
             <div class="mb-3">
-              <label for="jumlah_warga_terdampak" class="form-label">Jumlah Warga Terdampak</label>
-              <input type="number" class="form-control" name="jumlah_warga_terdampak" id="jumlah_warga_terdampak"
-                aria-describedby="helpId" />
-              <small id="helpId" class="form-text text-muted">Masukan jumlah warga yang terdampak gangguan...</small>
-            </div>
-          </div>
-
-          <div class="mb-4">
-            <div class="mb-3">
-              <label for="durasi_gangguan" class="form-label">Durasi Gangguan (jam)</label>
-              <input type="number" class="form-control" name="durasi_gangguan" id="durasi_gangguan"
-                aria-describedby="helpId" />
-              <small id="helpId" class="form-text text-muted">Masukan durasi gangguan dalam satuan jam...</small>
+              <label for="status_darurat" class="form-label">Status Darurat</label>
+              <input type="checkbox" name="status_darurat" id="status_darurat" value="on">
+              <small class="form-text text-muted">Centang jika masalah yang terjadi bersifat darurat atau kritis...</small>
             </div>
           </div>
 
@@ -484,6 +474,7 @@
   <script>
     // Variabel global untuk data issues dan help texts
     let issuesData = {};
+    let issuesDataStrip = {};
     let helpTexts = {};
 
     // Load data dari JSON file
@@ -491,6 +482,7 @@
       .then(response => response.json())
       .then(data => {
         issuesData = data.issues;
+        issuesDataStrip = data["issues-striped"];
         helpTexts = data.helpTexts;
         initializeForm();
       })
@@ -525,9 +517,9 @@
           issueTypeSelect.appendChild(defaultOption);
 
           // Tambahkan opsi berdasarkan kategori yang dipilih
-          issuesData[selectedCategory].forEach(issue => {
+          issuesData[selectedCategory].forEach((issue, idx) => {
             const option = document.createElement('option');
-            option.value = issue.toLowerCase().replace(/\s+/g, '-');
+            option.value = issuesDataStrip[selectedCategory][idx];
             option.textContent = issue;
             issueTypeSelect.appendChild(option);
           });
@@ -571,61 +563,43 @@
           if (data && data.status === 'success') {
             let htmlResult = '';
             
-            // Header dengan tingkat keparahan
-            const severityColor = {
-              'ringan': '#28a745',
-              'sedang': '#ffc107',
-              'berat': '#dc3545'
-            };
-            const severityLabel = {
-              'ringan': '✓ RINGAN',
-              'sedang': '⚠ SEDANG',
-              'berat': '🚨 BERAT'
-            };
+            // Status Darurat indicator
+            const statusBg = data.status_darurat.includes('DARURAT') ? '#dc3545' : '#28a745';
+            const statusIcon = data.status_darurat.includes('DARURAT') ? '🚨' : '✓';
             
-            htmlResult += `<div style="background: ${severityColor[data.tingkat_keparahan]}; color: white; padding: 10px; border-radius: 5px; margin-bottom: 10px; font-weight: bold;">
-              TINGKAT KEPARAHAN: ${severityLabel[data.tingkat_keparahan]} 
+            htmlResult += `<div style="background: ${statusBg}; color: white; padding: 12px; border-radius: 5px; margin-bottom: 12px; font-weight: bold;">
+              ${statusIcon} ${data.status_darurat}
             </div>`;
             
-            // Informasi dasar
-            htmlResult += `<div style="margin-bottom: 15px; font-size: 0.9em;">
+            // Informasi Dasar
+            htmlResult += `<div style="margin-bottom: 12px; font-size: 0.9em; background: #f0f0f0; padding: 10px; border-radius: 5px;">
               <strong>Kategori:</strong> ${data.kategori_layanan}<br>
-              <strong>Jenis Masalah:</strong> ${data.jenis_masalah || 'Lainnya'}<br>
-              <strong>Warga Terdampak:</strong> ${data.jumlah_warga_terdampak}<br>
-              <strong>Durasi (jam):</strong> ${data.durasi_gangguan_jam}
+              <strong>Jenis Masalah:</strong> ${data.jenis_masalah}
             </div>`;
             
-            // Tips Umum
-            if (data.tips_umum && data.tips_umum.length > 0) {
+            // Tips Output
+            if (data.tips && data.tips.length > 0) {
               htmlResult += `<div style="margin-bottom: 15px;">
-                <strong style="color: #0d6efd;">📋 Tips Umum untuk Kategori ${data.kategori_layanan.toUpperCase()} (Tingkat ${data.tingkat_keparahan.toUpperCase()}):</strong>
-                <ul style="margin-top: 8px; padding-left: 20px; font-size: 0.9em; line-height: 1.6;">`;
+                <strong style="color: #0d6efd; font-size: 1.05em;">📋 Rekomendasi & Tips:</strong>
+                <ul style="margin-top: 8px; padding-left: 22px; font-size: 0.95em; line-height: 1.8;">`;
               
-              data.tips_umum.forEach(tip => {
-                htmlResult += `<li>${tip}</li>`;
+              data.tips.forEach(tip => {
+                htmlResult += `<li style="margin-bottom: 6px;">${tip}</li>`;
               });
               
               htmlResult += `</ul></div>`;
             }
             
-            // Tips Spesifik
-            if (data.tips_spesifik) {
-              htmlResult += `<div style="margin-bottom: 15px; background: #e7f3ff; padding: 10px; border-left: 4px solid #0d6efd; border-radius: 3px;">
-                <strong style="color: #0d6efd;">🎯 Tips Khusus untuk Jenis Masalah "${data.jenis_masalah}":</strong>
-                <p style="margin: 8px 0 0 0; font-size: 0.9em; line-height: 1.6;">${data.tips_spesifik}</p>
-              </div>`;
-            }
-            
             $result.html(htmlResult).show();
           } else {
-            $result.html('<strong style="color: #dc3545;">Error:</strong> Gagal mendapatkan strategi.').show();
+            $result.html('<strong style="color: #dc3545;">Error:</strong> Gagal memproses permintaan.').show();
           }
         }).fail(function (jqXHR, textStatus) {
           let errorMsg = textStatus;
           if (jqXHR.responseJSON && jqXHR.responseJSON.error) {
             errorMsg = jqXHR.responseJSON.error;
           }
-          $result.html(`<strong style="color: #dc3545;">Error:</strong> ${errorMsg}`).show();
+          $result.html(`<strong style="color: #dc3545;">⚠️ Error:</strong> ${errorMsg}`).show();
         }).always(function () {
           $btn.prop('disabled', false).text('Dapatkan Strategi');
         });

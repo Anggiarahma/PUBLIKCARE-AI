@@ -16,6 +16,23 @@
       "Sampah b3 dibuang sembarangan (sampah medis, elektronik, industri)"
     ]
   },
+  "issues-striped": {
+    "listrik": [
+      "pemadaman-listrik",
+      "kabel-listrik-di-jalan-mengganggu",
+      "kebakaran-akibat-listrik"
+    ],
+    "air": [
+      "air-tidak-mengalir",
+      "kualitas-air-buruk",
+      "kebocoran-pipa-distribusi"
+    ],
+    "sampah": [
+      "sampah-menumpuk-tidak-diangkut",
+      "sungai-tersumbat-sampah",
+      "sampah-b3-dibuang-sembarangan"
+    ]
+  },
   "helpTexts": {
     "listrik": "Pilih jenis masalah terkait pasokan listrik dan infrastrukturnya",
     "air": "Pilih masalah terkait distribusi dan kualitas air bersih",
@@ -23,51 +40,73 @@
   },
   "tips": {
     "listrik": {
-      "hubungi-pln": "",
-      "cek-meteran": "",
-      "cabut-peralatan-listrik": "Pastikan peralatan elektronik tercabut",
-      "genset": "Gunakan genset sebagai penghasil listrik sementara",
-      "jangan-sentuh": "Jangan sentuh kabel, jaga jarak sebisa mungkin, perhatikan apakah ada kabel terkelupas yang terhubung ke tanah",
-      "sesuaikan-mata": "Saat listrik padam dan ruangan menjadi gelap, jangan langsung mencari senter. Biarkan mata Anda menyesuaikan diri dengan kegelapan selama beberapa saat sebelum bergerak, untuk memperkuat penglihatan. Dengan menyesuaikan diri dengan kegelapan, Anda tidak akan terantuk meja, tembok, pintu, dll."
+      "hubungi-pln-umum": "Hubungi PLN melalui call center 123 untuk laporan gangguan",
+      "catat-durasi-padam": "Catat waktu mulai dan akhir pemadaman untuk dokumentasi",
+      "periksa-instalasi-pribadi": "Periksa apakah masalah dari instalasi rumah atau jaringan umum",
+      "gunakan-stabilizer": "Gunakan stabilizer listrik untuk melindungi peralatan elektronik sensitif",
+      "siapkan-penerangan-darurat": "Siapkan lampu emergency, senter, atau lilin untuk kebutuhan penerangan saat malam",
+      "lapor-multiple-channel": "Laporkan ke multiple channel: PLN, media sosial, dan komunitas RT/RW",
+      "ambil-dokumentasi-foto": "Ambil foto/video kondisi gardu atau tiang listrik yang rusak untuk bukti",
+      "koordinasi-warga-massal": "Koordinasikan dengan warga agar laporan dilakukan secara massal untuk dampak lebih besar",
+      "minta-jadwal-perbaikan": "Minta informasi jadwal perbaikan resmi dari PLN untuk edukasi warga",
+      "verifikasi-tagihan-history": "Verifikasi tagihan history untuk memastikan tidak ada overcharge"
     },
     "air": {
-      
+      "lapor-pdam-umum": "Hubungi PDAM melalui layanan pelanggan untuk laporan gangguan air",
+      "periksa-kebocoran-rumah": "Periksa instalasi air rumah apakah ada kebocoran yang terlewat",
+      "sediakan-tangki-air": "Sediakan tangki penampung atau bak untuk cadangan air bersih",
+      "dokumentasi-kualitas": "Dokumentasi kondisi air dengan sampel dalam botol bersih untuk analisis",
+      "lapor-ke-dinkes": "Laporkan kualitas air buruk ke Dinas Kesehatan untuk verifikasi lab",
+      "survey-tetangga": "Survey ke tetangga apakah masalah tersebar luas atau terlokalisir saja",
+      "aktifkan-pencarian-alternatif": "Aktifkan pencarian alternatif air bersih dari sumur bor atau sumber lain",
+      "bersihkan-filter-rumah": "Bersihkan atau ganti filter air rumah jika ada upgrade/perbaikan",
+      "verifikasi-meteran-pdam": "Verifikasi pembacaan meteran PDAM dengan tim pdam langsung",
+      "cek-tekanan-pipa": "Cek tekanan pipa dengan membuka perlahan-lahan untuk observasi"
     },
     "sampah": {
-      "hubungi-dinas"
+      "lapor-dinas-kebersihan": "Hubungi Dinas Kebersihan untuk penjadwalan pengangkutan",
+      "dokumentasi-volume-sampah": "Dokumentasikan volume sampah tertumpuk dengan foto untuk laporan",
+      "edukasi-pemilahan-awal": "Edukasi warga agar memilah sampah sejak di rumah untuk kurangi volume",
+      "batasi-pembakaran-sampah": "Batasi dan larang pembakaran sampah di area publik karena polusi udara",
+      "koordinasi-pengangkutan": "Koordinasikan dengan Dinas untuk mempercepat jadwal pengangkutan",
+      "siapkan-tps-sementara": "Siapkan lokasi TPS sementara jika TPS utama terlalu penuh",
+      "program-pencegahan-sampah": "Promosikan program pengurangan sampah seperti composting komunal",
+      "survey-sumber-sampah": "Survey untuk mengidentifikasi sumber sampah terbesar untuk targeting",
+      "libatkan-komunitas": "Libatkan komunitas untuk pembersihan dan sorting sampah secara bersama",
+      "monitoring-tps-rutin": "Monitoring kondisi TPS secara rutin untuk prevent overflow"
     }
   },
-  "tips-darurat":{
-    "hubungi-damkar": "",
-    "hubungi-tim-sar"
-  },
-  "tipsSpesifik"{
+  "tips_darurat": {
     "listrik": {
-      "pemadaman-(tanpa-jadwal/bergilir)": "Catat waktu pemadaman, hubungi PLN untuk info estimasi pulih. Jika berulang, minta penjelasan beban peak hour.",
-      "tegangan-tidak-stabil-(redup/tinggi)": "Periksa kabel/sambungan rumah, gunakan stabilizer untuk peralatan elektronik sensitif. Laporkan ke PLN jika masalah dari gardu.",
-      "tiang/gardu-listrik-rusak/miring": "SEGERA LAPORKAN - potensi danger. Batasi akses publik dengan peringatan. PLN perlu perbaikan urgent.",
-      "kabel-listrik-mengganggu-(terkelupas/berserakan)": "DANGER - risiko electrocution. Laporkan emergency ke PLN. Jangan sentuh kabel. Batasi akses publik.",
-      "lampu-penerangan-jalan-(pju)-mati/kerlap-kerlip": "Laporkan ke Dinas Pekerjaan Umum untuk perbaikan. Jika berulang, audit sistem listrik PJU.",
-      "meteran-listrik-rusak/tidak-akurat": "Laporkan ke PLN untuk kalibrasi/penggantian. Minta perbandingan tagihan sebelumnya untuk validasi.",
-      "gangguan-pasokan-berkepanjangan": "Status critical - hubungi PLN eksekutif. Fasilitasi genset/bantuan energi. Document economic loss untuk klaim."
+      "hubungi-damkar": "Hubungi Dinas Damkar 113 jika ada ancaman kebakaran atau situasi berbahaya",
+      "evakuasi-area-bahaya": "Evakuasi warga dari area yang berpotensi bahaya karena listrik",
+      "siapkan-genset-komunal": "Siapkan genset komunal atau help dari pemerintah untuk fasilitas kritis",
+      "suspend-aktivitas-normal": "Suspend aktivitas normal dan fokus pada survival necessities",
+      "inform-media-massa": "Inform media massa tentang situasi darurat untuk public awareness",
+      "hubungi-gubernur-exec": "Hubungi gubernur atau executive level untuk rapid response",
+      "koordinasi-antar-dinas": "Koordinasikan dengan antar dinas untuk emergency response terpadu",
+      "setup-posko-darurat": "Setup posko pengungsian dengan fasilitas minimum untuk evacuees"
     },
     "air": {
-      "air-tidak-mengalir-sama-sekali": "Immediate action - periksa valve rumah. Laporkan ke PDAM untuk troubleshooting. Sediakan cadangan air emergency.",
-      "tekanan-air-lemah": "Verifikasi dengan tetangga apakah masalah area. Periksa pengguna banyak pada jam puncak. Laporkan ke PDAM jika sistemik.",
-      "kualitas-air-buruk-(keruh,-berbau,-berwarna)": "DO NOT USE - potential health hazard. Ambil sample untuk test laboratorium. Laporkan ke PDAM dan Dinkes.",
-      "kebocoran-pipa-distribusi": "Laporkan lokasi detail ke PDAM. Monitor penumpukan air yang bisa cause issues. Minta perbaikan urgent.",
-      "meteran-air-rusak/tidak-akurat": "Laporkan ke PDAM untuk penggantian. Request verifikasi pembacaan sebelumnya untuk rectification.",
-      "tagihan-tidak-wajar/melonjak": "Periksa meteran apakah ada kebocoran/anomali. Ajukan banding ke PDAM dengan dokumentasi bukti.",
-      "akses-air-bersih-belum-tersedia": "Koordinasi dengan Dinas PUPR untuk studi kelayakan jaringan. Fasilitasi interim solution: sumur bor/tandon komunal."
+      "hubungi-dinkes-emergency": "Hubungi Dinas Kesehatan emergency 119 untuk potensi outbreak penyakit berbasis air",
+      "distribusikan-air-darurat": "Distribusikan air minum darurat dari sumber alternatif ke warga",
+      "buat-sistem-rationing": "Buat sistem rationing air untuk kebutuhan minimum keluarga",
+      "hubungi-pemerintah-pusat": "Hubungi pemerintah pusat jika krisis water mencapai level region",
+      "setup-water-distribution-point": "Setup water distribution point resmi di berbagai lokasi akses mudah",
+      "monitoring-penyakit": "Monitoring kemunculan penyakit terkait air untuk early detection",
+      "siapkan-water-tanker": "Siapkan water tanker dari military atau resources pemerintah",
+      "inform-media-international": "Inform media international jika krisis sangat severe untuk help"
     },
     "sampah": {
-      "sampah-menumpuk-tidak-diangkut": "Catat durasi penumpukan, dokumentasikan volume. Laporkan ke Dinas Kebersihan dengan urgency tinggi.",
-      "truk-sampah-bocor/berbau/berisik": "Laporkan insiden spesifik ke Dinas Kebersihan. Tuntut standar operasional lebih baik dan maintenance berkala.",
-      "tps-overload/kotor/berbau": "Segera hubungi Dinas Kebersihan untuk pengangkutan emergency. Fasilitasi pembersihan TPS dan perbaikan fasilitas.",
-      "pembakaran-sampah-ilegal": "LAPORKAN ke Polisi Lingkungan dan Dinas Kebersihan. Edukasi pelaku dan sosialisasikan upaya pemilahan.",
-      "sampah-berserakan-di-jalan/sungai": "Laporkan ke Dinas Kebersihan. Fasilitasi pembersihan dan identifikasi sumber untuk preventive action.",
-      "kurang-fasilitas-pemilahan-sampah": "Usulan ke Dinas Kebersihan untuk penambahan TPS pilah. Edukasi masyarakat tentang pentingnya pemilahan.",
-      "limbah-ilegal-dibuang-sembarangan": "Identifikasi source limbah. Laporkan ke Polisi dan Dinas Lingkungan Hidup. Proses hukum jika perlu."
+      "hubungi-dinkes-sanitation": "Hubungi Dinas Kesehatan untuk monitoring sanitation crisis",
+      "establish-emergency-dump": "Establish emergency dump site diluar area untuk tampung garbage",
+      "koordinasi-heavy-equipment": "Koordinasi penggunaan heavy equipment untuk bulk transport sampah",
+      "implementasi-lockdown-area": "Implementasi lockdown area jika sudah contaminated parah",
+      "siapkan-ppe-workers": "Siapkan PPE lengkap untuk cleanup workers untuk proteksi",
+      "evakuasi-area-tercemar": "Evakuasi residensial area yang tercemar karena sampah",
+      "public-info-campaign": "Public info campaign tentang waste reduction urgent",
+      "setup-emergency-tpa": "Setup emergency TPA sementara dengan fasilitas minimum acceptable"
     }
   }
 }
+
