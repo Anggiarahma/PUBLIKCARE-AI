@@ -315,9 +315,6 @@
               <option value="listrik">⚡ Listrik</option>
               <option value="air">💧 Air Bersih</option>
               <option value="sampah">🗑️ Pengelolaan Sampah</option>
-              <option value="jalan">🛣️ Jalan Raya</option>
-              <option value="transportasi">🚌 Transportasi Umum</option>
-              <option value="taman">🌳 Taman dan Ruang Terbuka Publik</option>
             </select>
             <div class="form-text">Pilih kategori utama masalah yang ingin dilaporkan</div>
           </div>
@@ -699,7 +696,7 @@
             };
             
             htmlResult += `<div style="background: ${severityColor[data.tingkat_keparahan]}; color: white; padding: 10px; border-radius: 5px; margin-bottom: 10px; font-weight: bold;">
-              ${severityLabel[data.tingkat_keparahan]} - Poin Pembobotan: ${data.poin_pembobotan}/3
+              TINGKAT KEPARAHAN: ${severityLabel[data.tingkat_keparahan]} 
             </div>`;
             
             // Informasi dasar

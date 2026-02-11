@@ -1,224 +1,47 @@
 {
   "issues": {
     "listrik": [
-      "Pemadaman (tanpa jadwal/bergilir)",
-      "Tegangan tidak stabil (redup/tinggi)",
-      "Tiang/gardu listrik rusak/miring",
-      "Kabel listrik mengganggu (terkelupas/berserakan)",
-      "Lampu penerangan jalan (PJU) mati/kerlap-kerlip",
-      "Meteran listrik rusak/tidak akurat",
-      "Gangguan pasokan berkepanjangan"
+      "Pemadaman listrik (tanpa jadwal/bergilir)",
+      "Kabel listrik di jalan mengganggu (terkelupas/berserakan)",
+      "Kebakaran akibat listrik"
     ],
     "air": [
-      "Air tidak mengalir sama sekali",
-      "Tekanan air lemah",
+      "Air tidak mengalir",
       "Kualitas air buruk (keruh, berbau, berwarna)",
-      "Kebocoran pipa distribusi",
-      "Meteran air rusak/tidak akurat",
-      "Tagihan tidak wajar/melonjak",
-      "Akses air bersih belum tersedia"
+      "Kebocoran pipa distribusi"
     ],
     "sampah": [
       "Sampah menumpuk tidak diangkut",
-      "Truk sampah bocor/berbau/berisik",
-      "TPS overload/kotor/berbau",
-      "Pembakaran sampah ilegal",
-      "Sampah berserakan di jalan/sungai",
-      "Kurang fasilitas pemilahan sampah",
-      "Limbah ilegal dibuang sembarangan"
-    ],
-    "jalan": [
-      "Lubang/jalan rusak parah",
-      "Permukaan jalan tidak rata/bergelombang",
-      "Genangan air/banjir saat hujan",
-      "Fasilitas jalan rusak (pembatas/marka)",
-      "Lampu lalu lintas mati",
-      "Rambu lalu lintas rusak/tertutup",
-      "Trotoar rusak/dipakai parkir",
-      "Galian jalan tidak ditutup rapat"
-    ],
-    "transportasi": [
-      "Jadwal tidak tepat waktu",
-      "Kondisi kendaraan tidak layak",
-      "Kepadatan berlebihan (overcapacity)",
-      "Fasilitas halte/terminal rusak",
-      "Tarif tidak jelas/tidak sesuai",
-      "Tingkat keamanan rendah",
-      "Aksesibilitas untuk difabel buruk",
-      "Rute tidak mencukupi/tidak terintegrasi"
-    ],
-    "taman": [
-      "Penerangan kurang/lampu mati",
-      "Fasilitas rusak (alat main, bangku)",
-      "Pemeliharaan buruk (taman tidak terawat)",
-      "Akses ditutup/dipakai komersial",
-      "Toilet umum tidak berfungsi/kotor",
-      "Keamanan (preman/pengguna narkoba)",
-      "Kurangnya ruang hijau/taman",
-      "Hewan liar/telantar mengganggu"
+      "Sungai tersumbat sampah",
+      "Sampah b3 dibuang sembarangan (sampah medis, elektronik, industri)"
     ]
   },
   "helpTexts": {
     "listrik": "Pilih jenis masalah terkait pasokan listrik dan infrastrukturnya",
     "air": "Pilih masalah terkait distribusi dan kualitas air bersih",
-    "sampah": "Pilih masalah terkait pengumpulan dan pengolahan sampah",
-    "jalan": "Pilih masalah terkait kondisi dan fasilitas jalan",
-    "transportasi": "Pilih masalah terkait angkutan umum dan fasilitasnya",
-    "taman": "Pilih masalah terkait taman dan fasilitas publik"
+    "sampah": "Pilih masalah terkait pengumpulan dan pengolahan sampah"
   },
   "tips": {
     "listrik": {
-      "ringan": [
-        "Hubungi PLN layanan pelanggan untuk laporan gangguan",
-        "Catat waktu kejadian untuk dokumentasi",
-        "Periksa meteran listrik dan panel rumah untuk memastikan masalah bukan dari instalasi pribadi"
-      ],
-      "sedang": [
-        "Lakukan laporan ke kantor cabang PLN setempat",
-        "Kumpulkan data jumlah warga terdampak dan durasi gangguan",
-        "Koordinasikan dengan RT/RW untuk follow-up secara berkala",
-        "Siapkan pencahayaan alternatif untuk malam hari"
-      ],
-      "berat": [
-        "Lakukan laporan darurat ke PLN dengan prioritas tinggi",
-        "Catat data detail: jam mulai, jumlah warga, impact ekonomi",
-        "Hubungi media lokal untuk meningkatkan pressure terhadap perbaikan",
-        "Fasilitasi penggunaan genset portable di area publik jika diperlukan"
-      ],
-      "darurat": [
-        "ALERT: Gangguan listrik berat - mobilisasi tim reaksi cepat",
-        "Hubungi Dinas Energi/PLN langsung untuk penanganan emergency",
-        "Siapkan fasilitas darurat: genset, pencahayaan sementara, pos kesehatan jika perlu",
-        "Dokumentasikan dampak sosial-ekonomi untuk klaim kompensasi"
-      ]
+      "hubungi-pln": "",
+      "cek-meteran": "",
+      "cabut-peralatan-listrik": "Pastikan peralatan elektronik tercabut",
+      "genset": "Gunakan genset sebagai penghasil listrik sementara",
+      "jangan-sentuh": "Jangan sentuh kabel, jaga jarak sebisa mungkin, perhatikan apakah ada kabel terkelupas yang terhubung ke tanah",
+      "sesuaikan-mata": "Saat listrik padam dan ruangan menjadi gelap, jangan langsung mencari senter. Biarkan mata Anda menyesuaikan diri dengan kegelapan selama beberapa saat sebelum bergerak, untuk memperkuat penglihatan. Dengan menyesuaikan diri dengan kegelapan, Anda tidak akan terantuk meja, tembok, pintu, dll."
     },
     "air": {
-      "ringan": [
-        "Laporkan ke PDAM melalui telepon/aplikasi mobile",
-        "Periksa meteran rumah apakah normal atau ada kebocoran",
-        "Sediakan cadangan air bersih untuk kebutuhan mendesak"
-      ],
-      "sedang": [
-        "Buat laporan formal ke kantor PDAM setempat",
-        "Verifikasi dengan tetangga apakah masalah tersebar atau terlokalisir",
-        "Dokumentasikan kualitas air jika ada perubahan fisik/bau",
-        "Siapkan bak penampung atau cadangan air untuk warga"
-      ],
-      "berat": [
-        "Laporkan ke PDAM dengan status prioritas tinggi dan eskalasi ke pimpinan",
-        "Lakukan koordinasi dengan Dinas Kesehatan jika ada risiko kesehatan",
-        "Sosialisasikan ke warga tentang alternatif sumber air bersih",
-        "Fasilitasi bantuan air bersih dari sumber eksternal (toko, NGO) jika perlu"
-      ],
-      "darurat": [
-        "ALERT: Krisis air bersih - hubungi Pemerintah Daerah dan Dinas Kesehatan",
-        "Mobilisasi pengiriman air bersih darurat dari sumber alternatif",
-        "Tetapkan distribusi air prioritas untuk sektor kesehatan dan kebutuhan pokok",
-        "Monitoring kesehatan masyarakat untuk mencegah penyakit berbasis air"
-      ]
+      
     },
     "sampah": {
-      "ringan": [
-        "Hubungi Dinas Kebersihan untuk penjadwalan pengangkutan",
-        "Edukasi warga untuk mengurangi volume sampah (pemilahan)",
-        "Pastikan TPS sudah bersih sebelum pengangkutan berikutnya"
-      ],
-      "sedang": [
-        "Laporkan ke Dinas Kebersihan dengan data volume sampah tertumpuk",
-        "Koordinasikan penjadwalan pengangkutan darurat",
-        "Sebatasi akses ke TPS untuk mencegah penumpukan lebih lanjut",
-        "Edukasi pemilahan sampah untuk mengurangi volume"
-      ],
-      "berat": [
-        "Eskalasikan laporan ke Dinas Kebersihan dan Dinas Lingkungan Hidup",
-        "Minta pengangkutan sampah prioritas dengan multiple truk",
-        "Terapkan sistem pembatasan sampah sementara (bawa ke TPA langsung)",
-        "Sosialisasikan upaya pengelolaan sampah mandiri (composting) ke warga"
-      ],
-      "darurat": [
-        "ALERT: Krisis sampah - mobilisasi multiple tim pengangkutan dari seluruh dinas",
-        "Fasilitasi pengangkutan langsung ke TPA untuk mengatasi overflow TPS",
-        "Pertimbangkan pengangkutan ke lokasi alternatif sambil TPS dibersihkan",
-        "Terapkan emergency protocol: kurangi produksi limbah, minimal pemeliharaan hijau"
-      ]
-    },
-    "jalan": {
-      "ringan": [
-        "Laporkan ke Dinas Pekerjaan Umum untuk dievaluasi prioritas perbaikan",
-        "Pasang peringatan sementara di area bermasalah",
-        "Monitor kondisi jalan secara berkala untuk mencegah perburukan"
-      ],
-      "sedang": [
-        "Lakukan koordinasi dengan Dinas PU untuk penjadwalan perbaikan",
-        "Catat kondisi detail dengan foto dan lokasi GPS",
-        "Pasang signage peringatan untuk keselamatan pengguna jalan",
-        "Lakukan perbaikan sementara jika memungkinkan (pengerasan, pengaspalan parsial)"
-      ],
-      "berat": [
-        "Eskalasikan ke Dinas PU dan minta mempercepat perbaikan",
-        "Identifikasi rute alternatif untuk mengurangi beban lalu lintas",
-        "Fasilitasi perbaikan darurat untuk area dengan risiko kecelakaan tinggi",
-        "Koordinasikan dengan kepolisian untuk manajemen lalu lintas selama perbaikan"
-      ],
-      "darurat": [
-        "ALERT: Jalan kritis tidak layak - tutup sementara jika berbahaya",
-        "Mobilisasi tim perbaikan emergency dari Dinas PU",
-        "Tetapkan rute alternatif dan informasikan ke publik",
-        "Koordinasi dengan pihak terkait untuk perbaikan cepat dan kompensasi"
-      ]
-    },
-    "transportasi": {
-      "ringan": [
-        "Laporkan ke operasional transportasi umum untuk ditindaklanjuti",
-        "Catat nomor kendaraan dan jam kejadian untuk dokumentasi",
-        "Verifikasi dengan pengguna lain untuk pola kejadian"
-      ],
-      "sedang": [
-        "Lakukan formal complaint ke manajemen transportasi umum",
-        "Kumpulkan data dari multiple pengguna untuk validasi masalah",
-        "Minta evaluasi dan penyesuaian jadwal/armada",
-        "Monitor pelaksanaan tindakan perbaikan"
-      ],
-      "berat": [
-        "Eskalasikan ke Dinas Transportasi dan Perhubungan",
-        "Lakukan audit kondisi armada dan sistem operasional",
-        "Tetapkan standar minimal layanan dan penalti jika tidak tercapai",
-        "Fasilitasi pelatihan ulang operator dan maintenance berkala"
-      ],
-      "darurat": [
-        "ALERT: Sistem transportasi critical failure - mobilisasi contingency plan",
-        "Aktivasi armada cadangan dan fasilitasi transportasi alternatif",
-        "Koordinasi dengan angkutan pribadi/online untuk mengisi kekosongan",
-        "Review menyeluruh sistem dan terapkan quality assurance ketat"
-      ]
-    },
-    "taman": {
-      "ringan": [
-        "Laporkan ke Dinas Taman dan Ruang Hijau untuk maintenance rutin",
-        "Koordinasikan dengan komunitas lokal untuk upaya perawatan bersama",
-        "Catat jenis kerusakan untuk dokumentasi prioritas perbaikan"
-      ],
-      "sedang": [
-        "Lakukan laporan prioritas ke Dinas Taman dan Ruang Hijau",
-        "Kumpulkan data dan dokumentasi kerusakan dengan foto/video",
-        "Fasilitasi perbaikan fasilitas rusak (alat main, bangku, pencahayaan)",
-        "Mobilisasi komunitas untuk pembersihan dan perawatan"
-      ],
-      "berat": [
-        "Eskalasikan ke Dinas Taman, Kebersihan, dan Keamanan",
-        "Lakukan assessment menyeluruh kondisi taman dan keamanannya",
-        "Fasilitasi perbaikan besar-besaran dan peningkatan pencahayaan",
-        "Terapkan program keamanan intensif dan pemberdayaan pengguna"
-      ],
-      "darurat": [
-        "ALERT: Taman tidak aman digunakan publik - tutup akses sementara jika perlu",
-        "Mobilisasi multi-instansi: Taman, Keamanan, Sosial untuk recovery",
-        "Prioritaskan perbaikan infrastruktur keselamatan dan pencahayaan",
-        "Lakukan community engagement untuk rehabilitation dan monitoring berkelanjutan"
-      ]
+      "hubungi-dinas"
     }
   },
-  "tipsSpesifik": {
+  "tips-darurat":{
+    "hubungi-damkar": "",
+    "hubungi-tim-sar"
+  },
+  "tipsSpesifik"{
     "listrik": {
       "pemadaman-(tanpa-jadwal/bergilir)": "Catat waktu pemadaman, hubungi PLN untuk info estimasi pulih. Jika berulang, minta penjelasan beban peak hour.",
       "tegangan-tidak-stabil-(redup/tinggi)": "Periksa kabel/sambungan rumah, gunakan stabilizer untuk peralatan elektronik sensitif. Laporkan ke PLN jika masalah dari gardu.",
@@ -245,36 +68,6 @@
       "sampah-berserakan-di-jalan/sungai": "Laporkan ke Dinas Kebersihan. Fasilitasi pembersihan dan identifikasi sumber untuk preventive action.",
       "kurang-fasilitas-pemilahan-sampah": "Usulan ke Dinas Kebersihan untuk penambahan TPS pilah. Edukasi masyarakat tentang pentingnya pemilahan.",
       "limbah-ilegal-dibuang-sembarangan": "Identifikasi source limbah. Laporkan ke Polisi dan Dinas Lingkungan Hidup. Proses hukum jika perlu."
-    },
-    "jalan": {
-      "lubang/jalan-rusak-parah": "DANGER - risk of accident. Pasang peringatan sementara. Laporkan urgent ke Dinas PU dengan foto lokasi.",
-      "permukaan-jalan-tidak-rata/bergelombang": "Laporkan ke Dinas PU untuk evaluasi. Monitor deformasi untuk pola kerusakan dan penyebab.",
-      "genangan-air/banjir-saat-hujan": "Laporkan ke Dinas PU (drainase) dan DLH. Identifikasi penyebab: saluran tersumbat, design jelek, atau ground subsidence.",
-      "fasilitas-jalan-rusak-(pembatas/marka)": "Laporkan ke Dinas PU untuk perbaikan markisasi dan pembatas jalan untuk safety.",
-      "lampu-lalu-lintas-mati": "Laporkan ke Dinas Transportasi/PU. Risk of accident - monitor hingga diperbaiki.",
-      "rambu-lalu-lintas-rusak/tertutup": "Laporkan ke Dinas Transportasi. Risiko confusion untuk pengguna jalan - prioritas perbaikan.",
-      "trotoar-rusak/dipakai-parkir": "Isu enforcement - laporkan ke Satpol PP untuk penertiban parkir. Minta perbaikan trotoar ke Dinas PU.",
-      "galian-jalan-tidak-ditutup-rapat": "DANGER - safety hazard. Laporkan ke contractor dan Dinas PU. Minta perbaikan urgent dan signage peringatan."
-    },
-    "transportasi": {
-      "jadwal-tidak-tepat-waktu": "Catat keterlambatan secara konsisten. Laporkan ke operator dengan data. Minta improvement atau audit operasional.",
-      "kondisi-kendaraan-tidak-layak": "Lapor operator dan Dinas Transportasi. Dokumentasikan kerusakan. Tuntut perbaikan atau penggantian armada.",
-      "kepadatan-berlebihan-(overcapacity)": "Laporkan dengan data pengguna. Minta penambahan armada atau frequency pemberangkatan.",
-      "fasilitas-halte/terminal-rusak": "Laporkan ke operator dan Dinas Transportasi. Minta perbaikan atau upgrade fasilitas.",
-      "tarif-tidak-jelas/tidak-sesuai": "Verifikasi tarif resmi. Jika ada penyimpangan, laporkan ke Dinas Transportasi untuk enforcement.",
-      "tingkat-keamanan-rendah": "Dokumentasikan insiden keamanan. Laporkan ke operator dan kepolisian. Minta patrol dan CCTV.",
-      "aksesibilitas-untuk-difabel-buruk": "Laporkan ke operator dan Dinas Sosial. Minta upgrade fasilitas ramp, handrail, reserved seating.",
-      "rute-tidak-mencukupi/tidak-terintegrasi": "Proposal rute baru ke operator/Dinas Transportasi. Fasilitasi studi kelayakan dan koordinasi antar operator."
-    },
-    "taman": {
-      "penerangan-kurang/lampu-mati": "Laporkan ke Dinas Pekerjaan Umum/Taman. Prioritaskan pencahayaan untuk keamanan. Upgrade ke LED jika perlu.",
-      "fasilitas-rusak-(alat-main,-bangku)": "Laporkan ke Dinas Taman dan Ruang Hijau. Minta perbaikan atau penggantian fasilitas.",
-      "pemeliharaan-buruk-(taman-tidak-terawat)": "Dokumentasikan kondisi. Laporkan ke Dinas Taman untuk intensifikasi maintenance. Mobilisasi komunitas.",
-      "akses-ditutup/dipakai-komersial": "Isu regulatory - laporkan ke Dinas dan Satpol PP. Tuntut pemulihan fungsi taman sebagai ruang publik.",
-      "toilet-umum-tidak-berfungsi/kotor": "Laporkan ke Dinas Taman/Kebersihan. Minta perbaikan fasilitas dan intensifikasi kebersihan.",
-      "keamanan-(preman/pengguna-narkoba)": "LAPORKAN KE POLISI. Koordinasi dengan Dinas untuk keamanan intensif dan community patrol.",
-      "kurangnya-ruang-hijau/taman": "Advocacy/proposal perencanaan taman baru ke Dinas Taman. Usulan land use untuk ruang hijau publik.",
-      "hewan-liar/telantar-mengganggu": "Laporkan ke Dinas Kehewanan untuk penangkapan/relokasi. Edukasi masyarakat tentang tidak memberi makan."
     }
   }
 }
