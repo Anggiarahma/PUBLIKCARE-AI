@@ -40,72 +40,114 @@
   },
   "tips": {
     "listrik": {
-      "hubungi-pln-umum": "Hubungi PLN melalui call center 123 untuk laporan gangguan",
-      "catat-durasi-padam": "Catat waktu mulai dan akhir pemadaman untuk dokumentasi",
-      "periksa-instalasi-pribadi": "Periksa apakah masalah dari instalasi rumah atau jaringan umum",
-      "gunakan-stabilizer": "Gunakan stabilizer listrik untuk melindungi peralatan elektronik sensitif",
-      "siapkan-penerangan-darurat": "Siapkan lampu emergency, senter, atau lilin untuk kebutuhan penerangan saat malam",
-      "lapor-multiple-channel": "Laporkan ke multiple channel: PLN, media sosial, dan komunitas RT/RW",
-      "ambil-dokumentasi-foto": "Ambil foto/video kondisi gardu atau tiang listrik yang rusak untuk bukti",
-      "koordinasi-warga-massal": "Koordinasikan dengan warga agar laporan dilakukan secara massal untuk dampak lebih besar",
-      "minta-jadwal-perbaikan": "Minta informasi jadwal perbaikan resmi dari PLN untuk edukasi warga",
-      "verifikasi-tagihan-history": "Verifikasi tagihan history untuk memastikan tidak ada overcharge"
+      "pemadaman-listrik": [
+        "Gunakan senter atau lampu baterai; hindari penggunaan lilin untuk mencegah kebakaran",
+        "Cabut peralatan elektronik sensitif untuk mencegah kerusakan akibat lonjakan listrik saat listrik kembali",
+        "Pastikan kulkas tetap tertutup agar suhu dingin bertahan lebih lama",
+        "Periksa informasi resmi dari PLN melalui aplikasi atau kanal resmi",
+        "Pastikan ventilasi ruangan baik jika menggunakan genset di luar rumah"
+      ],
+      "kabel-listrik-di-jalan-mengganggu": [
+        "Jangan menyentuh atau mendekati kabel listrik yang jatuh atau terbuka",
+        "Jaga jarak minimal beberapa meter dari kabel dan genangan air di sekitarnya",
+        "Laporkan segera ke PLN atau pihak berwenang",
+        "Beri peringatan kepada warga sekitar dari jarak aman"
+      ]
     },
     "air": {
-      "lapor-pdam-umum": "Hubungi PDAM melalui layanan pelanggan untuk laporan gangguan air",
-      "periksa-kebocoran-rumah": "Periksa instalasi air rumah apakah ada kebocoran yang terlewat",
-      "sediakan-tangki-air": "Sediakan tangki penampung atau bak untuk cadangan air bersih",
-      "dokumentasi-kualitas": "Dokumentasi kondisi air dengan sampel dalam botol bersih untuk analisis",
-      "lapor-ke-dinkes": "Laporkan kualitas air buruk ke Dinas Kesehatan untuk verifikasi lab",
-      "survey-tetangga": "Survey ke tetangga apakah masalah tersebar luas atau terlokalisir saja",
-      "aktifkan-pencarian-alternatif": "Aktifkan pencarian alternatif air bersih dari sumur bor atau sumber lain",
-      "bersihkan-filter-rumah": "Bersihkan atau ganti filter air rumah jika ada upgrade/perbaikan",
-      "verifikasi-meteran-pdam": "Verifikasi pembacaan meteran PDAM dengan tim pdam langsung",
-      "cek-tekanan-pipa": "Cek tekanan pipa dengan membuka perlahan-lahan untuk observasi"
+      "air-tidak-mengalir": [
+        "Gunakan cadangan air bersih secara hemat untuk kebutuhan utama",
+        "Periksa apakah gangguan hanya terjadi di rumah atau wilayah sekitar",
+        "Tutup keran untuk mencegah udara masuk saat aliran kembali",
+        "Pantau pengumuman resmi dari PDAM atau pemerintah daerah"
+      ],
+      "kualitas-air-buruk": [
+        "Jangan gunakan air keruh atau berbau untuk minum atau memasak",
+        "Gunakan air kemasan atau rebus air hingga mendidih minimal 1 menit jika terpaksa",
+        "Gunakan air alternatif untuk bayi dan kelompok rentan",
+        "Laporkan perubahan kualitas air ke penyedia layanan air"
+      ],
+      "kebocoran-pipa-distribusi": [
+        "Jauhi area kebocoran untuk menghindari amblesan tanah atau kontaminasi",
+        "Laporkan lokasi kebocoran kepada PDAM atau dinas terkait",
+        "Hemat penggunaan air sampai perbaikan selesai",
+        "Hindari kontak dengan air jika terlihat tercemar"
+      ]
     },
     "sampah": {
-      "lapor-dinas-kebersihan": "Hubungi Dinas Kebersihan untuk penjadwalan pengangkutan",
-      "dokumentasi-volume-sampah": "Dokumentasikan volume sampah tertumpuk dengan foto untuk laporan",
-      "edukasi-pemilahan-awal": "Edukasi warga agar memilah sampah sejak di rumah untuk kurangi volume",
-      "batasi-pembakaran-sampah": "Batasi dan larang pembakaran sampah di area publik karena polusi udara",
-      "koordinasi-pengangkutan": "Koordinasikan dengan Dinas untuk mempercepat jadwal pengangkutan",
-      "siapkan-tps-sementara": "Siapkan lokasi TPS sementara jika TPS utama terlalu penuh",
-      "program-pencegahan-sampah": "Promosikan program pengurangan sampah seperti composting komunal",
-      "survey-sumber-sampah": "Survey untuk mengidentifikasi sumber sampah terbesar untuk targeting",
-      "libatkan-komunitas": "Libatkan komunitas untuk pembersihan dan sorting sampah secara bersama",
-      "monitoring-tps-rutin": "Monitoring kondisi TPS secara rutin untuk prevent overflow"
+      "sampah-menumpuk-tidak-diangkut": [
+        "Simpan sampah rumah tangga dalam wadah tertutup rapat",
+        "Gunakan sarung tangan dan masker jika harus menangani sampah sendiri",
+        "Pisahkan sampah organik dan anorganik untuk mengurangi bau dan hama",
+        "Laporkan kondisi ke dinas kebersihan setempat"
+      ],
+      "sungai-tersumbat-sampah": [
+        "Hindari masuk ke sungai yang tersumbat atau berarus deras",
+        "Jauhkan anak-anak dari area sungai",
+        "Pindahkan barang dari daerah rawan banjir",
+        "Koordinasikan kegiatan bersih sungai melalui komunitas resmi"
+      ],
+      "sampah-b3-dibuang-sembarangan": [
+        "Jangan menyentuh atau memindahkan sampah B3",
+        "Jauhkan warga dari lokasi dan beri tanda peringatan",
+        "Laporkan ke dinas lingkungan hidup atau pihak berwenang",
+        "Hindari menghirup asap atau kontak langsung dengan bahan"
+      ]
     }
   },
   "tips_darurat": {
     "listrik": {
-      "hubungi-damkar": "Hubungi Dinas Damkar 113 jika ada ancaman kebakaran atau situasi berbahaya",
-      "evakuasi-area-bahaya": "Evakuasi warga dari area yang berpotensi bahaya karena listrik",
-      "siapkan-genset-komunal": "Siapkan genset komunal atau help dari pemerintah untuk fasilitas kritis",
-      "suspend-aktivitas-normal": "Suspend aktivitas normal dan fokus pada survival necessities",
-      "inform-media-massa": "Inform media massa tentang situasi darurat untuk public awareness",
-      "hubungi-gubernur-exec": "Hubungi gubernur atau executive level untuk rapid response",
-      "koordinasi-antar-dinas": "Koordinasikan dengan antar dinas untuk emergency response terpadu",
-      "setup-posko-darurat": "Setup posko pengungsian dengan fasilitas minimum untuk evacuees"
+      "pemadaman-listrik": [
+        "Pastikan keselamatan penghuni terutama lansia dan anak-anak",
+        "Gunakan lampu darurat berbasis baterai",
+        "Matikan peralatan listrik berdaya besar",
+        "Hubungi layanan PLN jika pemadaman disertai percikan atau bau terbakar"
+      ],
+      "kabel-listrik-di-jalan-mengganggu": [
+        "Segera evakuasi orang dari sekitar kabel",
+        "Jangan menyentuh benda logam yang bersentuhan dengan kabel",
+        "Hubungi PLN atau layanan darurat"
+      ],
+      "kebakaran-akibat-listrik": [
+        "Evakuasi segera dan hubungi pemadam kebakaran (113)",
+        "Putuskan listrik hanya jika aman",
+        "Gunakan APAR non-air jika tersedia",
+        "Tutup hidung dan mulut dengan kain basah saat evakuasi dari asap"
+      ]
     },
     "air": {
-      "hubungi-dinkes-emergency": "Hubungi Dinas Kesehatan emergency 119 untuk potensi outbreak penyakit berbasis air",
-      "distribusikan-air-darurat": "Distribusikan air minum darurat dari sumber alternatif ke warga",
-      "buat-sistem-rationing": "Buat sistem rationing air untuk kebutuhan minimum keluarga",
-      "hubungi-pemerintah-pusat": "Hubungi pemerintah pusat jika krisis water mencapai level region",
-      "setup-water-distribution-point": "Setup water distribution point resmi di berbagai lokasi akses mudah",
-      "monitoring-penyakit": "Monitoring kemunculan penyakit terkait air untuk early detection",
-      "siapkan-water-tanker": "Siapkan water tanker dari military atau resources pemerintah",
-      "inform-media-international": "Inform media international jika krisis sangat severe untuk help"
+      "air-tidak-mengalir": [
+        "Prioritaskan penggunaan air untuk minum dan sanitasi dasar",
+        "Gunakan sumber air darurat resmi",
+        "Laporkan jika gangguan berlangsung lama"
+      ],
+      "kualitas-air-buruk": [
+        "Hentikan penggunaan air untuk konsumsi",
+        "Gunakan air kemasan atau bantuan air bersih resmi",
+        "Segera cari pertolongan medis jika muncul gejala keracunan"
+      ],
+      "kebocoran-pipa-distribusi": [
+        "Jauhi area genangan besar",
+        "Evakuasi jika terjadi amblesan tanah",
+        "Laporkan segera ke penyedia layanan air"
+      ]
     },
     "sampah": {
-      "hubungi-dinkes-sanitation": "Hubungi Dinas Kesehatan untuk monitoring sanitation crisis",
-      "establish-emergency-dump": "Establish emergency dump site diluar area untuk tampung garbage",
-      "koordinasi-heavy-equipment": "Koordinasi penggunaan heavy equipment untuk bulk transport sampah",
-      "implementasi-lockdown-area": "Implementasi lockdown area jika sudah contaminated parah",
-      "siapkan-ppe-workers": "Siapkan PPE lengkap untuk cleanup workers untuk proteksi",
-      "evakuasi-area-tercemar": "Evakuasi residensial area yang tercemar karena sampah",
-      "public-info-campaign": "Public info campaign tentang waste reduction urgent",
-      "setup-emergency-tpa": "Setup emergency TPA sementara dengan fasilitas minimum acceptable"
+      "sampah-menumpuk-tidak-diangkut": [
+        "Jaga jarak dari tumpukan sampah besar",
+        "Gunakan alat pelindung jika terpaksa menangani",
+        "Laporkan kondisi berisiko kesehatan"
+      ],
+      "sungai-tersumbat-sampah": [
+        "Evakuasi jika terjadi banjir mendadak",
+        "Jauhkan warga dari arus deras",
+        "Ikuti arahan petugas"
+      ],
+      "sampah-b3-dibuang-sembarangan": [
+        "Isolasi area dan larang akses",
+        "Hubungi dinas lingkungan hidup atau BPBD",
+        "Segera evakuasi jika tercium bau menyengat atau asap"
+      ]
     }
   }
 }

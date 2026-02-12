@@ -106,38 +106,38 @@
             </div>
           </div><!-- End Why Box -->
 
-        <!-- Strategi Penanganan PUBLIKCARE -->
-<div class="col-lg-8">
-  <div class="row gy-4">
+          <!-- Strategi Penanganan PUBLIKCARE -->
+          <div class="col-lg-8">
+            <div class="row gy-4">
 
-    <!-- Box 1 -->
-    <div class="col-xl-6 d-flex">
-      <div class="icon-box d-flex flex-column h-140 text-center p-4" data-aos="zoom-out" data-aos-delay="800">
-        <div class="mb-8">
-          <i class="bi bi-gear-fill fs-1"></i>
-        </div>
-        <h4>Solusi & Rekomendasi</h4>
-        <p class="flex-grow-1">
-          Dapatkan rekomendasi langkah penanganan yang tepat sesuai jenis gangguan yang terjadi.
-        </p>
-      </div>
-    </div>
+              <!-- Box 1 -->
+              <div class="col-xl-6 d-flex">
+                <div class="icon-box d-flex flex-column h-140 text-center p-4" data-aos="zoom-out" data-aos-delay="800">
+                  <div class="mb-8">
+                    <i class="bi bi-gear-fill fs-1"></i>
+                  </div>
+                  <h4>Solusi & Rekomendasi</h4>
+                  <p class="flex-grow-1">
+                    Dapatkan rekomendasi langkah penanganan yang tepat sesuai jenis gangguan yang terjadi.
+                  </p>
+                </div>
+              </div>
 
-    <!-- Box 2 -->
-    <div class="col-xl-6 d-flex">
-      <div class="icon-box d-flex flex-column h-100 text-center p-4" data-aos="zoom-out" data-aos-delay="500">
-        <div class="mb-3">
-          <i class="bi bi-clipboard-check fs-1"></i>
-        </div>
-        <h4>Pantau Status Gangguan</h4>
-        <p class="flex-grow-1">
-          Ikuti update terkini mengenai progres penanganan dan kapan layanan akan pulih normal.
-        </p>
-      </div>
-    </div>
+              <!-- Box 2 -->
+              <div class="col-xl-6 d-flex">
+                <div class="icon-box d-flex flex-column h-100 text-center p-4" data-aos="zoom-out" data-aos-delay="500">
+                  <div class="mb-3">
+                    <i class="bi bi-clipboard-check fs-1"></i>
+                  </div>
+                  <h4>Pantau Status Gangguan</h4>
+                  <p class="flex-grow-1">
+                    Ikuti update terkini mengenai progres penanganan dan kapan layanan akan pulih normal.
+                  </p>
+                </div>
+              </div>
 
-  </div>
-</div>
+            </div>
+          </div>
 
     </section><!-- /Hero Section -->
 
@@ -216,7 +216,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          
+
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-item position-relative">
@@ -251,68 +251,65 @@
     </section><!-- /Services Section -->
 
     <!-- Penanganan Section -->
-<section id="appointment" class="appointment section" style="background: #09637E; padding: 60px 0; color: #fff;">
-  <div class="container section-title text-center" data-aos="fade-up">
-    <h2 style="color: #fff;">Penanganan Masalah Publik</h2>
-    <p>Isi form di bawah agar kami bisa memberikan strategi penanganan cepat!</p>
-  </div>
+    <section id="appointment" class="appointment section" style="background: #09637E; padding: 60px 0; color: #fff;">
+      <div class="container section-title text-center" data-aos="fade-up">
+        <h2 style="color: #fff;">Penanganan Masalah Publik</h2>
+        <p>Isi form di bawah agar kami bisa memberikan strategi penanganan cepat!</p>
+      </div>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <form id="appointmentForm" action="{{ url_for('submit') }}" method="post"
-      style="max-width: 700px; margin: auto; background: #ffffff; color: #000; 
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <form id="appointmentForm" action="{{ url_for('submit') }}" method="post" style="max-width: 700px; margin: auto; background: #ffffff; color: #000; 
              padding: 30px; border-radius: 15px; 
              box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
              font-family: Arial, sans-serif;">
 
-      <!-- Kategori -->
-      <div class="mb-4">
-        <label for="mainCategory" class="form-label">Kategori Utama</label>
-        <select name="mainCategory" class="form-select form-select-lg" id="mainCategory">
-          <option value="" selected disabled>-- Pilih Kategori Utama --</option>
-          <option value="listrik">⚡ Listrik</option>
-          <option value="air">💧 Air Bersih</option>
-          <option value="sampah">🗑️ Pengelolaan Sampah</option>
-        </select>
-      </div>
+          <!-- Kategori -->
+          <div class="mb-4">
+            <label for="mainCategory" class="form-label">Kategori Utama</label>
+            <select name="mainCategory" class="form-select form-select-lg" id="mainCategory">
+              <option value="" selected disabled>-- Pilih Kategori Utama --</option>
+              <option value="listrik">⚡ Listrik</option>
+              <option value="air">💧 Air Bersih</option>
+              <option value="sampah">🗑️ Pengelolaan Sampah</option>
+            </select>
+          </div>
 
-      <!-- Jenis Masalah -->
-      <div class="mb-4">
-        <label for="issueType" class="form-label">Jenis Masalah</label>
-        <select name="issueType" class="form-select form-select-lg" id="issueType">
-          <option value="" selected disabled>-- Pilih Jenis Masalah --</option>
-        </select>
-      </div>
+          <!-- Jenis Masalah -->
+          <div class="mb-4">
+            <label for="issueType" class="form-label">Jenis Masalah</label>
+            <select name="issueType" class="form-select form-select-lg" id="issueType">
+              <option value="" selected disabled>-- Pilih Jenis Masalah --</option>
+            </select>
+          </div>
 
-      <!-- Status Darurat -->
-      <div class="mb-4">
-        <label for="status_darurat" class="form-label">Status Darurat</label><br>
-        <input type="checkbox" name="status_darurat" id="status_darurat" value="on">
-        <small class="form-text text-muted">
-          Centang jika masalah yang terjadi bersifat darurat atau kritis.
-        </small>
-      </div>
+          <!-- Status Darurat -->
+          <div class="mb-4">
+            <label for="status_darurat" class="form-label">Status Darurat</label><br>
+            <input type="checkbox" name="status_darurat" id="status_darurat" value="on">
+            <small class="form-text text-muted">
+              Centang jika masalah yang terjadi bersifat darurat atau kritis.
+            </small>
+          </div>
 
-      <!-- Hasil -->
-      <div id="appointmentResult"
-           style="display:none; padding:15px; border-radius:10px; 
+          <!-- Hasil -->
+          <div id="appointmentResult" style="display:none; padding:15px; border-radius:10px; 
                   font-weight:500; margin-bottom:15px;">
-      </div>
+          </div>
 
-      <!-- Button -->
-      <div class="text-center">
-        <button type="submit"
-          style="background: linear-gradient(90deg, #00c6ff, #0072ff); 
+          <!-- Button -->
+          <div class="text-center">
+            <button type="submit" style="background: linear-gradient(90deg, #00c6ff, #0072ff); 
                  color: white; border: none; 
                  padding: 12px 35px; border-radius: 25px; 
                  font-weight: bold; cursor: pointer; font-size: 1rem;
                  transition: 0.3s;">
-          Dapatkan Strategi
-        </button>
-      </div>
+              Dapatkan Strategi
+            </button>
+          </div>
 
-    </form>
-  </div>
-</section>
+        </form>
+      </div>
+    </section>
 
     <style>
       .gallery-item img:hover {
@@ -337,36 +334,36 @@
         </iframe>
       </div><!-- End Google Maps -->
 
-     <div class="container" data-aos="fade-up" data-aos-delay="100">
-  <div class="row gy-4">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
 
-    <div class="col-lg-6">
+          <div class="col-lg-6">
 
-      <!-- Alamat -->
-      <div class="info-item d-flex align-items-start mb-4" data-aos="fade-up" data-aos-delay="300">
-        <i class="bi bi-geo-alt me-3 fs-4"></i>
-        <div>
-          <h5 class="mb-1">Alamat</h5>
-          <p class="mb-0">Jalan Raya Amir Mahmud GG Sukawargi V RT 04 RW 01</p>
+            <!-- Alamat -->
+            <div class="info-item d-flex align-items-start mb-4" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt me-3 fs-4"></i>
+              <div>
+                <h5 class="mb-1">Alamat</h5>
+                <p class="mb-0">Jalan Raya Amir Mahmud GG Sukawargi V RT 04 RW 01</p>
+              </div>
+            </div>
+
+            <!-- Telepon -->
+            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone me-3 fs-4"></i>
+              <div>
+                <h5 class="mb-1">Telepon</h5>
+                <p class="mb-0">0896 5570 4544</p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
 
-      <!-- Telepon -->
-      <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="400">
-        <i class="bi bi-telephone me-3 fs-4"></i>
-        <div>
-          <h5 class="mb-1">Telepon</h5>
-          <p class="mb-0">0896 5570 4544</p>
-        </div>
+
       </div>
-
-    </div>
-
-  </div>
-</div>
-
-
-        </div>
       </div>
     </section>
 
@@ -474,33 +471,12 @@
   <!-- Main JS File -->
   <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
   <!-- SCRIPT -->
-<script>
-  const form = document.getElementById("appointmentForm");
-  const resultBox = document.getElementById("appointmentResult");
-  const daruratCheckbox = document.getElementById("status_darurat");
+  <script>
+    const form = document.getElementById("appointmentForm");
+    const resultBox = document.getElementById("appointmentResult");
+    const daruratCheckbox = document.getElementById("status_darurat");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // supaya tidak reload (hapus kalau mau kirim ke backend)
-
-    resultBox.style.display = "block";
-
-    if (daruratCheckbox.checked) {
-      // MERAH = DARURAT
-      resultBox.style.background = "#ffe5e5";
-      resultBox.style.color = "#b30000";
-      resultBox.style.border = "1px solid #ff4d4d";
-      resultBox.innerHTML = "🚨 Status DARURAT! Segera lakukan tindakan cepat sesuai prosedur.";
-    } else {
-      // ORANGE = NORMAL
-resultBox.style.setProperty("background", "#fff3e0", "important");
-resultBox.style.setProperty("color", "#cc7000", "important");
-resultBox.style.setProperty("border", "1px solid #ffa726", "important");
-
-resultBox.innerHTML = "⚠️ Status NORMAL. Lakukan penanganan sesuai prosedur standar.";
-
-    }
-  });
-</script>
+  </script>
   <script>
     // Variabel global untuk data issues dan help texts
     let issuesData = {};
@@ -546,13 +522,13 @@ resultBox.innerHTML = "⚠️ Status NORMAL. Lakukan penanganan sesuai prosedur 
           defaultOption.disabled = true;
           issueTypeSelect.appendChild(defaultOption);
 
-            // Tambahkan opsi berdasarkan kategori yang dipilih
-            issuesData[selectedCategory].forEach((issue, idx) => {
-              const option = document.createElement('option');
-              option.value = issuesDataStrip[selectedCategory][idx];
-              option.textContent = issue;
-              issueTypeSelect.appendChild(option);
-            });
+          // Tambahkan opsi berdasarkan kategori yang dipilih
+          issuesData[selectedCategory].forEach((issue, idx) => {
+            const option = document.createElement('option');
+            option.value = issuesDataStrip[selectedCategory][idx];
+            option.textContent = issue;
+            issueTypeSelect.appendChild(option);
+          });
 
           // Update help text
           issueHelpText.textContent = helpTexts[selectedCategory];
@@ -586,34 +562,44 @@ resultBox.innerHTML = "⚠️ Status NORMAL. Lakukan penanganan sesuai prosedur 
         }).done(function (data) {
           if (data && data.status === 'success') {
             let htmlResult = '';
-            
+
             // Status Darurat indicator
             const statusBg = data.status_darurat.includes('DARURAT') ? '#dc3545' : '#FFC107';
             const statusIcon = data.status_darurat.includes('DARURAT') ? '🚨' : '⚠️';
-            
+
             htmlResult += `<div style="background: ${statusBg}; color: white; padding: 12px; border-radius: 5px; margin-bottom: 12px; font-weight: bold;">
               ${statusIcon} ${data.status_darurat}
             </div>`;
-            
+
             // Informasi Dasar
             htmlResult += `<div style="margin-bottom: 12px; font-size: 0.9em; background: #f0f0f0; padding: 10px; border-radius: 5px;">
               <strong>Kategori:</strong> ${data.kategori_layanan}<br>
               <strong>Jenis Masalah:</strong> ${data.jenis_masalah}
             </div>`;
-            
+
             // Tips Output
             if (data.tips && data.tips.length > 0) {
               htmlResult += `<div style="margin-bottom: 15px;">
                 <strong style="color: #0d6efd; font-size: 1.05em;">📋 Rekomendasi & Tips:</strong>
                 <ul style="margin-top: 8px; padding-left: 22px; font-size: 0.95em; line-height: 1.8;">`;
-              
+
               data.tips.forEach(tip => {
                 htmlResult += `<li style="margin-bottom: 6px;">${tip}</li>`;
               });
-              
+
               htmlResult += `</ul></div>`;
             }
-            
+
+            if (data.status_darurat.includes('DARURAT')) {
+              $result.css("background", "#ffe5e5");
+              $result.css("color", "#b30000");
+              $result.css("border", "1px solid #ff4d4d");
+            } else {
+              $result.css("background", "#fff3e0");
+              $result.css("color", "#cc7000");
+              $result.css("border", "1px solid #ffa726");
+            }
+
             $result.html(htmlResult).show();
           } else {
             $result.html('<strong style="color: #dc3545;">Error:</strong> Gagal memproses permintaan.').show();
@@ -623,6 +609,9 @@ resultBox.innerHTML = "⚠️ Status NORMAL. Lakukan penanganan sesuai prosedur 
           if (jqXHR.responseJSON && jqXHR.responseJSON.error) {
             errorMsg = jqXHR.responseJSON.error;
           }
+          $result.css("background", "#BDBDBD");
+          $result.css("color", "black");
+          $result.css("border", "1px solid black");
           $result.html(`<strong style="color: #dc3545;">⚠️ Error:</strong> ${errorMsg}`).show();
         }).always(function () {
           $btn.prop('disabled', false).text('Dapatkan Strategi');
