@@ -179,8 +179,8 @@
               <li>
                 <i class="bi bi-gear text-danger"></i>
                 <div>
-                  <h5>Gangguan Fasilitas Umum</h5>
-                  <p>Langkah-langkah penanganan fasilitas publik seperti transportasi, jalan, atau gedung umum.</p>
+                  <h5>Gangguan Fasilitas</h5>
+                  <p>Langkah-langkah penanganan fasilitas publik seperti Sampah</p>
                 </div>
               </li>
             </ul>
@@ -251,62 +251,68 @@
     </section><!-- /Services Section -->
 
     <!-- Penanganan Section -->
-    <section id="appointment" class="appointment section" style="background: #09637E; padding: 60px 0; color: #fff;">
-      <div class="container section-title text-center" data-aos="fade-up">
-        <h2 style="color: #fff;">Penanganan Masalah Publik</h2>
-        <p>Isi form di bawah agar kami bisa memberikan strategi penanganan cepat!</p>
+<section id="appointment" class="appointment section" style="background: #09637E; padding: 60px 0; color: #fff;">
+  <div class="container section-title text-center" data-aos="fade-up">
+    <h2 style="color: #fff;">Penanganan Masalah Publik</h2>
+    <p>Isi form di bawah agar kami bisa memberikan strategi penanganan cepat!</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <form id="appointmentForm" action="{{ url_for('submit') }}" method="post"
+      style="max-width: 700px; margin: auto; background: #ffffff; color: #000; 
+             padding: 30px; border-radius: 15px; 
+             box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+             font-family: Arial, sans-serif;">
+
+      <!-- Kategori -->
+      <div class="mb-4">
+        <label for="mainCategory" class="form-label">Kategori Utama</label>
+        <select name="mainCategory" class="form-select form-select-lg" id="mainCategory" required>
+          <option value="" selected disabled>-- Pilih Kategori Utama --</option>
+          <option value="listrik">⚡ Listrik</option>
+          <option value="air">💧 Air Bersih</option>
+          <option value="sampah">🗑️ Pengelolaan Sampah</option>
+        </select>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <form id="appointmentForm" action="{{ url_for('submit') }}" method="post" class="php-email-form"
-          style="max-width: 700px; margin: auto; background: #ffffff; color: #000; 
-                 padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); font-family: Arial, sans-serif;">
-
-          <div class="mb-4">
-            <label for="mainCategory" class="form-label required">Kategori Utama</label>
-            <select name="mainCategory" class="form-select form-select-lg" id="mainCategory" required>
-              <option value="" selected disabled>-- Pilih Kategori Utama --</option>
-              <option value="listrik">⚡ Listrik</option>
-              <option value="air">💧 Air Bersih</option>
-              <option value="sampah">🗑️ Pengelolaan Sampah</option>
-            </select>
-            <div class="form-text">Pilih kategori utama masalah yang ingin dilaporkan</div>
-          </div>
-
-          <!-- Jenis Masalah (Dropdown Kedua) -->
-          <div class="mb-4">
-            <label for="issueType" class="form-label required">Jenis Masalah</label>
-            <select name="issueType" class="form-select form-select-lg" id="issueType" disabled required>
-              <option value="" selected disabled>-- Pilih Kategori Utama terlebih dahulu --</option>
-              <!-- Opsi akan diisi secara dinamis berdasarkan pilihan kategori utama -->
-            </select>
-            <div class="form-text" id="issueHelpText">Pilih jenis masalah spesifik yang terjadi</div>
-          </div>
-
-          <div class="mb-4">
-            <div class="mb-3">
-              <label for="status_darurat" class="form-label">Status Darurat</label>
-              <input type="checkbox" name="status_darurat" id="status_darurat" value="on">
-              <small class="form-text text-muted">Centang jika masalah yang terjadi bersifat darurat atau kritis...</small>
-            </div>
-          </div>
-
-          <div id="appointmentResult" class="mb-3" style="display:none; background:#f8f9fa; padding:12px; border-radius:8px; color:#000; margin-bottom:12px;"> </div>
-
-          <div class="text-center">
-            <button id="appointmentSubmitBtn" type="submit" style="background: linear-gradient(90deg, #00c6ff, #0072ff); color: white; border: none; 
-                       padding: 12px 35px; border-radius: 25px; font-weight: bold; cursor: pointer; font-size: 1rem;
-                       transition: 0.3s;">
-              Dapatkan Strategi
-            </button>
-          </div>
-
-        </form>
+      <!-- Jenis Masalah -->
+      <div class="mb-4">
+        <label for="issueType" class="form-label">Jenis Masalah</label>
+        <select name="issueType" class="form-select form-select-lg" id="issueType" required>
+          <option value="" selected disabled>-- Pilih Jenis Masalah --</option>
+        </select>
       </div>
-    </section>
 
+      <!-- Status Darurat -->
+      <div class="mb-4">
+        <label for="status_darurat" class="form-label">Status Darurat</label><br>
+        <input type="checkbox" name="status_darurat" id="status_darurat" value="on">
+        <small class="form-text text-muted">
+          Centang jika masalah yang terjadi bersifat darurat atau kritis.
+        </small>
+      </div>
 
-  
+      <!-- Hasil -->
+      <div id="appointmentResult"
+           style="display:none; padding:15px; border-radius:10px; 
+                  font-weight:500; margin-bottom:15px;">
+      </div>
+
+      <!-- Button -->
+      <div class="text-center">
+        <button type="submit"
+          style="background: linear-gradient(90deg, #00c6ff, #0072ff); 
+                 color: white; border: none; 
+                 padding: 12px 35px; border-radius: 25px; 
+                 font-weight: bold; cursor: pointer; font-size: 1rem;
+                 transition: 0.3s;">
+          Dapatkan Strategi
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>
 
     <style>
       .gallery-item img:hover {
@@ -467,6 +473,34 @@
 
   <!-- Main JS File -->
   <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+  <!-- SCRIPT -->
+<script>
+  const form = document.getElementById("appointmentForm");
+  const resultBox = document.getElementById("appointmentResult");
+  const daruratCheckbox = document.getElementById("status_darurat");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // supaya tidak reload (hapus kalau mau kirim ke backend)
+
+    resultBox.style.display = "block";
+
+    if (daruratCheckbox.checked) {
+      // MERAH = DARURAT
+      resultBox.style.background = "#ffe5e5";
+      resultBox.style.color = "#b30000";
+      resultBox.style.border = "1px solid #ff4d4d";
+      resultBox.innerHTML = "🚨 Status DARURAT! Segera lakukan tindakan cepat sesuai prosedur.";
+    } else {
+      // ORANGE = NORMAL
+resultBox.style.setProperty("background", "#fff3e0", "important");
+resultBox.style.setProperty("color", "#cc7000", "important");
+resultBox.style.setProperty("border", "1px solid #ffa726", "important");
+
+resultBox.innerHTML = "⚠️ Status NORMAL. Lakukan penanganan sesuai prosedur standar.";
+
+    }
+  });
+</script>
   <script>
     // Variabel global untuk data issues dan help texts
     let issuesData = {};
