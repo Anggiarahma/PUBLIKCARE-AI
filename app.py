@@ -29,7 +29,7 @@ def get_tips_for_condition(kategori_layanan, jenis_masalah, darurat):
     # ============================================
     # LISTRIK - Pemadaman listrik
     # ============================================
-    if kategori_layanan == "listrik" and jenis_masalah == "pemadaman-listrik" and not darurat:
+    if kategori_layanan == "listrik" and jenis_masalah == "pemadaman-listrik":
         tips_list.extend([
             tips_dict.get('hubungi-pln-umum'),
             tips_dict.get('catat-durasi-padam'),
@@ -48,7 +48,7 @@ def get_tips_for_condition(kategori_layanan, jenis_masalah, darurat):
     # ============================================
     # LISTRIK - Kabel listrik di jalan mengganggu
     # ============================================
-    elif kategori_layanan == "listrik" and jenis_masalah == "kabel-listrik-di-jalan-mengganggu" and not darurat:
+    elif kategori_layanan == "listrik" and jenis_masalah == "kabel-listrik-di-jalan-mengganggu":
         tips_list.extend([
             tips_dict.get('hubungi-pln-umum'),
             tips_dict.get('ambil-dokumentasi-foto'),
@@ -76,7 +76,7 @@ def get_tips_for_condition(kategori_layanan, jenis_masalah, darurat):
     # ============================================
     # AIR - Air tidak mengalir
     # ============================================
-    elif kategori_layanan == "air" and jenis_masalah == "air-tidak-mengalir" and not darurat:
+    elif kategori_layanan == "air" and jenis_masalah == "air-tidak-mengalir":
         tips_list.extend([
             tips_dict.get('lapor-pdam-umum'),
             tips_dict.get('periksa-kebocoran-rumah'),
@@ -93,7 +93,7 @@ def get_tips_for_condition(kategori_layanan, jenis_masalah, darurat):
     # ============================================
     # AIR - Kualitas air buruk
     # ============================================
-    elif kategori_layanan == "air" and jenis_masalah == "kualitas-air-buruk" and not darurat:
+    elif kategori_layanan == "air" and jenis_masalah == "kualitas-air-buruk":
          tips_list.extend([
                 tips_dict.get('dokumentasi-kualitas'),
                 tips_dict.get('lapor-ke-dinkes'),
@@ -110,7 +110,7 @@ def get_tips_for_condition(kategori_layanan, jenis_masalah, darurat):
     # ============================================
     # AIR - Kebocoran pipa distribusi
     # ============================================
-    elif kategori_layanan == "air" and jenis_masalah == "kebocoran-pipa-distribusi" and not darurat:
+    elif kategori_layanan == "air" and jenis_masalah == "kebocoran-pipa-distribusi":
         tips_list.extend([
                 tips_dict.get('lapor-pdam-umum'),
                 tips_dict.get('dokumentasi-kualitas'),
@@ -127,7 +127,7 @@ def get_tips_for_condition(kategori_layanan, jenis_masalah, darurat):
     # ============================================
     # SAMPAH - Sampah menumpuk tidak diangkut
     # ============================================
-    elif kategori_layanan == "sampah" and jenis_masalah == "sampah-menumpuk-tidak-diangkut" and not darurat:
+    elif kategori_layanan == "sampah" and jenis_masalah == "sampah-menumpuk-tidak-diangkut":
         tips_list.extend([
                 tips_dict.get('lapor-dinas-kebersihan'),
                 tips_dict.get('dokumentasi-volume-sampah'),
@@ -146,7 +146,7 @@ def get_tips_for_condition(kategori_layanan, jenis_masalah, darurat):
     # ============================================
     # SAMPAH - Sungai tersumbat sampah
     # ============================================
-    elif kategori_layanan == "sampah" and jenis_masalah == "sungai-tersumbat-sampah" and not darurat:
+    elif kategori_layanan == "sampah" and jenis_masalah == "sungai-tersumbat-sampah":
         tips_list.extend([
             tips_dict.get('lapor-dinas-kebersihan'),
             tips_dict.get('dokumentasi-volume-sampah'),
@@ -163,7 +163,7 @@ def get_tips_for_condition(kategori_layanan, jenis_masalah, darurat):
     # ============================================
     # SAMPAH - Sampah B3 dibuang sembarangan
     # ============================================
-    elif kategori_layanan == "sampah" and jenis_masalah == "sampah-b3-dibuang-sembarangan" and not darurat:
+    elif kategori_layanan == "sampah" and jenis_masalah == "sampah-b3-dibuang-sembarangan":
         tips_list.extend([
             tips_dict.get('lapor-ke-dinkes'),
             tips_dict.get('dokumentasi-kualitas')
@@ -176,32 +176,7 @@ def get_tips_for_condition(kategori_layanan, jenis_masalah, darurat):
             tips_darurat_dict.get('evakuasi-area-tercemar')
         ])
     
-    # ============================================
-    # DEFAULT - Jika tidak ada kondisi spesifik
-    # ============================================
-    else:
-        if darurat:
-            tips_list.extend([
-                "Hubungi dinas terkait untuk situasi darurat",
-                "Evakuasi dari area jika diperlukan",
-                "Dokumentasikan kondisi dengan foto/video",
-                "Koordinasikan dengan komunitas lokal"
-            ])
-        else:
-            tips_list.extend([
-                "Laporkan ke dinas terkait",
-                "Dokumentasikan kondisi dengan foto/video",
-                "Koordinasikan dengan komunitas lokal"
-            ])
-            
-    seen = set()
-    unique_tips = []
-    for tip in tips_list:
-        if tip not in seen:
-            seen.add(tip)
-            unique_tips.append(tip)
-    
-    return unique_tips
+    return tips_list
 
 
 @app.route('/submit', methods=['POST'])
@@ -211,10 +186,10 @@ def submit():
         jenis_masalah = request.form.get('issueType', '')
         status_darurat = request.form.get('status_darurat', 'off') == 'on'
         
-        if not kategori_layanan == "":
+        if not kategori_layanan:
             return jsonify({'status': 'error', 'error': 'Kategori utama belum dipilih'}), 400
         
-        if not jenis_masalah == "":
+        if not jenis_masalah:
             return jsonify({'status': 'error', 'error': 'Jenis masalah belum dipilih'}), 400
         
         tips_output = get_tips_for_condition(kategori_layanan, jenis_masalah, status_darurat)
@@ -223,7 +198,7 @@ def submit():
             'status': 'success',
             'kategori_layanan': kategori_layanan,
             'jenis_masalah': jenis_masalah,
-            'status_darurat': 'DARURAT' if status_darurat else '',
+            'status_darurat': 'DARURAT' if status_darurat else 'Tidak Darurat',
             'tips': tips_output
         }
         
