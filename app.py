@@ -16,165 +16,221 @@ issues_data = load_issues_data()
 def index():
     return render_template("index.html")
 
-
-def calculate_weighting(jumlah_warga, durasi, jenis_masalah):
-    """
-    Hitung poin pembobotan berdasarkan:
-    - Jumlah warga terdampak (max 1 poin)
-    - Durasi gangguan (max 1 poin)
-    - Jenis masalah severity (max 1 poin)
-    Total: 0-3 poin
-    """
+def get_tips_for_condition(kategori, jenis_masalah, darurat):
     
-    poin = 0.0
+    tips_list = []
     
-    # Poin dari jumlah warga terdampak (0-1)
-    try:
-        jumlah = int(jumlah_warga) if jumlah_warga else 0
-        if jumlah > 0:
-            if jumlah < 50:
-                poin += 0.2
-            elif jumlah < 100:
-                poin += 0.4
-            elif jumlah < 500:
-                poin += 0.6
-            elif jumlah < 1000:
-                poin += 0.8
-            else:
-                poin += 1.0
-    except:
-        pass
-    
-    # Poin dari durasi gangguan (0-1)
-    try:
-        durasi_jam = int(durasi) if durasi else 0
-        if durasi_jam > 0:
-            # Skala: < 2 jam = 0.2, 2-6 jam = 0.4, 6-12 jam = 0.6, 12-24 jam = 0.8, > 24 jam = 1.0
-            if durasi_jam < 2:
-                poin += 0.2 
-            elif durasi_jam < 6:
-                poin += 0.4
-            elif durasi_jam < 12:
-                poin += 0.6
-            elif durasi_jam < 24:
-                poin += 0.8
-            else:
-                poin += 1.0
-    except:
-        pass
-    
-    # Poin dari jenis masalah (severity baseline) (0-1)
-    # Beberapa jenis masalah memiliki severity lebih tinggi
-    high_severity_keywords = [
-        'rusak', 'danger', 'emergency', 'darurat', 'ilegal', 'parah',
-        'terkelupas', 'keselamatan', 'kritis', 'tidak-layak'
-    ]
-    
-    jenis_lower = jenis_masalah.lower() if jenis_masalah else ""
-    if any(keyword in jenis_lower for keyword in high_severity_keywords):
-        poin += 1.0
-    else:
-        poin += 0.3
-    
-    # Normalize jika perlu (capped at 3)
-    poin = min(poin, 3.0)
-    
-    return round(poin, 2)
-
-
-def determine_severity(poin):
-    if poin <= 1:
-        return "ringan"
-    elif poin <= 2:
-        return "sedang"
-    else:
-        return "berat"
-
-
-def get_tips_for_category_severity(category, severity):
     if not issues_data:
-        return []
+        return tips_list
     
-    tips_section = issues_data.get('tips', {}).get(category, {})
+    tips_dict = issues_data.get('tips', {}).get(kategori, {})
+    tips_darurat_dict = issues_data.get('tips_darurat', {}).get(kategori, {})
     
-    if severity == "berat":
-        # Untuk berat, gabungkan tips berat + tips darurat
-        tips = tips_section.get('berat', []) + tips_section.get('darurat', [])
+    # ============================================
+    # LISTRIK - Pemadaman listrik
+    # ============================================
+    if kategori == "listrik" and jenis_masalah == "pemadaman-listrik":
+        tips_list.extend([
+            tips_dict.get('hubungi-pln-umum'),
+            tips_dict.get('catat-durasi-padam'),
+            tips_dict.get('siapkan-penerangan-darurat'),
+            tips_dict.get('periksa-instalasi-pribadi')
+        ])
+
+    elif kategori == "listrik" and jenis_masalah == "pemadaman-listrik" and darurat:
+        tips_list.extend([
+            tips_darurat_dict.get('hubungi-damkar', 'Hubungi Dinas Damkar 113'),
+            tips_darurat_dict.get('evakuasi-area-bahaya', 'Evakuasi area bahaya'),
+            tips_darurat_dict.get('siapkan-genset-komunal', 'Siapkan genset komunal'),
+            tips_darurat_dict.get('suspend-aktivitas-normal', 'Suspend aktivitas normal')
+        ])
+    
+    # ============================================
+    # LISTRIK - Kabel listrik di jalan mengganggu
+    # ============================================
+    elif kategori == "listrik" and jenis_masalah == "kabel-listrik-di-jalan-mengganggu":
+        tips_list.extend([
+            tips_dict.get('hubungi-pln-umum'),
+            tips_dict.get('ambil-dokumentasi-foto'),
+            tips_dict.get('koordinasi-warga-massal', 'Koordinasi warga untuk laporan massal')
+        ])
+
+    elif kategori == "listrik" and jenis_masalah == "kabel-listrik-di-jalan-mengganggu" and darurat:
+        tips_list.extend([
+            tips_darurat_dict.get('hubungi-damkar', 'Hubungi Dinas Damkar 113'),
+            tips_darurat_dict.get('evakuasi-area-bahaya', 'Evakuasi area bahaya'),
+            tips_darurat_dict.get('siapkan-genset-komunal', 'Siapkan genset komunal'),
+            tips_darurat_dict.get('inform-media-massa', 'Inform media massa')
+        ])
+        
+    # ============================================
+    # LISTRIK - Kebakaran akibat listrik
+    # ============================================
+    elif kategori == "listrik" and jenis_masalah == "kebakaran-akibat-listrik":
+        tips_list.extend([
+            tips_darurat_dict.get('hubungi-damkar', 'Hubungi Damkar 113 SEGERA'),
+            tips_darurat_dict.get('evakuasi-area-bahaya', 'Evakuasi area bahaya'),
+            tips_darurat_dict.get('siapkan-genset-komunal', 'Siapkan genset komunal')
+        ])
+    
+    # ============================================
+    # AIR - Air tidak mengalir
+    # ============================================
+    elif kategori == "air" and jenis_masalah == "air-tidak-mengalir":
+        tips_list.extend([
+            tips_dict.get('lapor-pdam-umum', 'Laporkan ke PDAM'),
+            tips_dict.get('periksa-kebocoran-rumah', 'Periksa kebocoran rumah'),
+            tips_dict.get('sediakan-tangki-air', 'Sediakan tangki air cadangan')
+        ])
+    elif kategori == "air" and jenis_masalah == "air-tidak-mengalir" and darurat:
+        tips_list.extend([
+            tips_darurat_dict.get('hubungi-dinkes-emergency', 'Hubungi Dinas Kesehatan emergency'),
+            tips_darurat_dict.get('distribusikan-air-darurat', 'Distribusikan air minum darurat'),
+            tips_darurat_dict.get('buat-sistem-rationing', 'Buat sistem rationing air'),
+            tips_darurat_dict.get('siapkan-water-tanker', 'Siapkan water tanker')
+        ])
+    
+    # ============================================
+    # AIR - Kualitas air buruk
+    # ============================================
+    elif kategori == "air" and jenis_masalah == "kualitas-air-buruk":
+         tips_list.extend([
+                tips_dict.get('dokumentasi-kualitas', 'Dokumentasi sampel air'),
+                tips_dict.get('lapor-ke-dinkes', 'Laporkan ke Dinas Kesehatan'),
+                tips_dict.get('lapor-pdam-umum', 'Laporkan ke PDAM')
+            ])
+    elif kategori == "air" and jenis_masalah == "kualitas-air-buruk" and darurat:
+        tips_list.extend([
+            tips_darurat_dict.get('hubungi-dinkes-emergency', 'Hubungi Dinas Kesehatan emergency'),
+            tips_darurat_dict.get('monitoring-penyakit', 'Monitoring penyakit terkait air'),
+            tips_darurat_dict.get('siapkan-water-tanker', 'Siapkan water tanker'),
+            tips_darurat_dict.get('inform-media-international', 'Inform media jika sangat severe')
+        ])
+           
+    # ============================================
+    # AIR - Kebocoran pipa distribusi
+    # ============================================
+    elif kategori == "air" and jenis_masalah == "kebocoran-pipa-distribusi":
+        tips_list.extend([
+                tips_dict.get('lapor-pdam-umum', 'Laporkan ke PDAM'),
+                tips_dict.get('dokumentasi-kualitas', 'Dokumentasi lokasi kebocoran'),
+                tips_dict.get('lapor-ke-dinkes', 'Catat waktu dan durasi kebocoran')
+            ])
+    elif kategori == "air" and jenis_masalah == "kebocoran-pipa-distribusi" and darurat:
+        tips_list.extend([
+            tips_darurat_dict.get('distribusikan-air-darurat', 'Distribusikan air minum darurat'),
+            tips_darurat_dict.get('buat-sistem-rationing', 'Buat sistem rationing air'),
+            tips_darurat_dict.get('setup-water-distribution-point', 'Setup water distribution point'),
+            tips_darurat_dict.get('siapkan-water-tanker', 'Siapkan water tanker')
+        ])       
+    
+    # ============================================
+    # SAMPAH - Sampah menumpuk tidak diangkut
+    # ============================================
+    elif kategori == "sampah" and jenis_masalah == "sampah-menumpuk-tidak-diangkut":
+        tips_list.extend([
+                tips_dict.get('lapor-dinas-kebersihan', 'Laporkan ke Dinas Kebersihan'),
+                tips_dict.get('dokumentasi-volume-sampah', 'Dokumentasi volume sampah'),
+                tips_dict.get('edukasi-pemilahan-awal', 'Edukasi pemilahan sampah'),
+                tips_dict.get('batasi-pembakaran-sampah', 'Batasi pembakaran sampah')
+            ])
+    elif kategori == "sampah" and jenis_masalah == "sampah-menumpuk-tidak-diangkut" and darurat:
+        tips_list.extend([
+            tips_darurat_dict.get('hubungi-dinkes-sanitation', 'Hubungi Dinas Kesehatan'),
+            tips_darurat_dict.get('establish-emergency-dump', 'Establish emergency dump site'),
+            tips_darurat_dict.get('koordinasi-heavy-equipment', 'Koordinasi heavy equipment'),
+            tips_darurat_dict.get('setup-emergency-tpa', 'Setup emergency TPA sementara')
+        ])
+            
+    
+    # ============================================
+    # SAMPAH - Sungai tersumbat sampah
+    # ============================================
+    elif kategori == "sampah" and jenis_masalah == "sungai-tersumbat-sampah":
+        tips_list.extend([
+            tips_dict.get('lapor-dinas-kebersihan', 'Laporkan ke Dinas Kebersihan dan Lingkungan'),
+            tips_dict.get('dokumentasi-volume-sampah', 'Dokumentasi kondisi sungai'),
+            tips_dict.get('edukasi-pemilahan-awal', 'Edukasi warga tentang pembuangan sampah')
+        ])
+    elif kategori == "sampah" and jenis_masalah == "sungai-tersumbat-sampah" and darurat:
+        tips_list.extend([
+            tips_darurat_dict.get('hubungi-dinkes-sanitation', 'Hubungi Dinas Kesehatan'),
+            tips_darurat_dict.get('implementasi-lockdown-area', 'Implementasi lockdown area'),
+            tips_darurat_dict.get('evakuasi-area-tercemar', 'Evakuasi area tercemar'),
+            tips_darurat_dict.get('setup-emergency-tpa', 'Setup emergency TPA sementara')
+        ])
+    
+    # ============================================
+    # SAMPAH - Sampah B3 dibuang sembarangan
+    # ============================================
+    elif kategori == "sampah" and jenis_masalah == "sampah-b3-dibuang-sembarangan":
+        tips_list.extend([
+            tips_dict.get('lapor-ke-dinkes', 'Laporkan ke Dinas Kesehatan dan Lingkungan'),
+            tips_dict.get('dokumentasi-kualitas', 'Dokumentasi lokasi dan jenis sampah B3')
+        ])
+    elif kategori == "sampah" and jenis_masalah == "sampah-b3-dibuang-sembarangan" and darurat:
+        tips_list.extend([
+            tips_darurat_dict.get('hubungi-dinkes-sanitation', 'Hubungi Dinas Kesehatan'),
+            tips_darurat_dict.get('implementasi-lockdown-area', 'Implementasi lockdown area'),
+            tips_darurat_dict.get('siapkan-ppe-workers', 'Siapkan PPE lengkap untuk workers'),
+            tips_darurat_dict.get('evakuasi-area-tercemar', 'Evakuasi area tercemar')
+        ])
+    
+    # ============================================
+    # DEFAULT - Jika tidak ada kondisi spesifik
+    # ============================================
     else:
-        tips = tips_section.get(severity, [])
+        if not darurat:
+            tips_list.extend([
+                "Laporkan ke dinas terkait",
+                "Dokumentasikan kondisi dengan foto/video",
+                "Koordinasikan dengan komunitas lokal"
+            ])
+        else:
+            tips_list.extend([
+                "Hubungi dinas terkait untuk situasi darurat",
+                "Evakuasi dari area jika diperlukan",
+                "Dokumentasikan kondisi dengan foto/video",
+                "Koordinasikan dengan komunitas lokal"
+            ])
     
-    return tips
-
-
-def get_specific_issue_tips(category, issue_type):
-    if not issues_data:
-        return None
+    seen = set()
+    unique_tips = []
+    for tip in tips_list:
+        if tip not in seen:
+            seen.add(tip)
+            unique_tips.append(tip)
     
-    tips_spesifik = issues_data.get('tipsSpesifik', {}).get(category, {})
-    
-    # Normalize issue_type key (sudah dalam format dengan dash)
-    tip = tips_spesifik.get(issue_type)
-    
-    return tip
+    return unique_tips
 
 
 @app.route('/submit', methods=['POST'])
 def submit():
     try:
-        # Ambil data dari form
         kategori_layanan = request.form.get('mainCategory', '').strip()
-        jenis_masalah = request.form.get('issueType', '').strip()
-        jumlah_warga_terdampak = request.form.get('jumlah_warga_terdampak', '').strip()
-        durasi_terdampak = request.form.get('durasi_gangguan', '').strip()
+        jenis_masalah = request.form.get('issueType', '')
+        status_darurat = request.form.get('status_darurat', 'off') == 'on'
         
-        # Validasi minimal
         if not kategori_layanan:
-            return jsonify({
-                'status': 'error',
-                'error': 'Kategori utama belum dipilih'
-            }), 400
+            return jsonify({'status': 'error', 'error': 'Kategori utama belum dipilih'}), 400
         
-        # Rule 1: Hitung pembobotan (modus ponens)
-        poin_pembobotan = calculate_weighting(jumlah_warga_terdampak, durasi_terdampak, jenis_masalah)
+        if not jenis_masalah:
+            return jsonify({'status': 'error', 'error': 'Jenis masalah belum dipilih'}), 400
         
-        # Rule 2: Tentukan tingkat keparahan berdasarkan poin (modus ponens)
-        tingkat_keparahan = determine_severity(poin_pembobotan)
+        tips_output = get_tips_for_condition(kategori_layanan, jenis_masalah, status_darurat)
         
-        # Rule 3: Ambil tips umum untuk kategori & tingkat keparahan (modus ponens)
-        tips_umum = get_tips_for_category_severity(kategori_layanan, tingkat_keparahan)
-        
-        # Rule 4: Cek apakah ada tips spesifik untuk jenis masalah (modus ponens)
-        tips_spesifik_text = None
-        if jenis_masalah and jenis_masalah != 'lainnya':
-            tips_spesifik_text = get_specific_issue_tips(kategori_layanan, jenis_masalah)
-        
-        # Build response
         response_data = {
             'status': 'success',
-            'poin_pembobotan': poin_pembobotan,
-            'tingkat_keparahan': tingkat_keparahan,
             'kategori_layanan': kategori_layanan,
             'jenis_masalah': jenis_masalah,
-            'jumlah_warga_terdampak': jumlah_warga_terdampak if jumlah_warga_terdampak else '-',
-            'durasi_gangguan_jam': durasi_terdampak if durasi_terdampak else '-',
-            'tips_umum': tips_umum,
-            'tips_spesifik': tips_spesifik_text,
-            'analisis': {
-                'rule_poin_pembobotan': f"Poin = {poin_pembobotan} (max 3)",
-                'rule_severity': f"{tingkat_keparahan.upper()}" if tingkat_keparahan == "ringan" else (
-                    "SEDANG" if tingkat_keparahan == "sedang" else "BERAT ⚠️"
-                ),
-                'rule_applied': f"IF kategori={kategori_layanan} AND tingkat_keparahan={tingkat_keparahan} THEN output_tips"
-            }
+            'status_darurat': 'DARURAT' if status_darurat else '',
+            'tips': tips_output
         }
         
         return jsonify(response_data), 200
     
     except Exception as e:
-        return jsonify({
-            'status': 'error',
-            'error': f'Server error: {str(e)}'
-        }), 500
+        return jsonify({'status': 'error', 'error': f'Server error: {str(e)}'}), 500
 
 
 if __name__ == "__main__":
