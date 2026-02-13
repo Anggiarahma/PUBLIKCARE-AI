@@ -40,14 +40,14 @@
   },
   "tips": {
     "listrik": {
-      "pemadaman-listrik": [
+      "tips-pemadaman-listrik": [
         "Gunakan senter atau lampu baterai; hindari penggunaan lilin untuk mencegah kebakaran",
         "Cabut peralatan elektronik sensitif untuk mencegah kerusakan akibat lonjakan listrik saat listrik kembali",
         "Pastikan kulkas tetap tertutup agar suhu dingin bertahan lebih lama",
         "Periksa informasi resmi dari PLN melalui aplikasi atau kanal resmi",
         "Pastikan ventilasi ruangan baik jika menggunakan genset di luar rumah"
       ],
-      "kabel-listrik-di-jalan-mengganggu": [
+      "tips-kabel-listrik-di-jalan-mengganggu": [
         "Jangan menyentuh atau mendekati kabel listrik yang jatuh atau terbuka",
         "Jaga jarak minimal beberapa meter dari kabel dan genangan air di sekitarnya",
         "Laporkan segera ke PLN atau pihak berwenang",
@@ -55,19 +55,19 @@
       ]
     },
     "air": {
-      "air-tidak-mengalir": [
+      "tips-air-tidak-mengalir": [
         "Gunakan cadangan air bersih secara hemat untuk kebutuhan utama",
         "Periksa apakah gangguan hanya terjadi di rumah atau wilayah sekitar",
         "Tutup keran untuk mencegah udara masuk saat aliran kembali",
         "Pantau pengumuman resmi dari PDAM atau pemerintah daerah"
       ],
-      "kualitas-air-buruk": [
+      "tips-kualitas-air-buruk": [
         "Jangan gunakan air keruh atau berbau untuk minum atau memasak",
         "Gunakan air kemasan atau rebus air hingga mendidih minimal 1 menit jika terpaksa",
         "Gunakan air alternatif untuk bayi dan kelompok rentan",
         "Laporkan perubahan kualitas air ke penyedia layanan air"
       ],
-      "kebocoran-pipa-distribusi": [
+      "tips-kebocoran-pipa-distribusi": [
         "Jauhi area kebocoran untuk menghindari amblesan tanah atau kontaminasi",
         "Laporkan lokasi kebocoran kepada PDAM atau dinas terkait",
         "Hemat penggunaan air sampai perbaikan selesai",
@@ -75,19 +75,19 @@
       ]
     },
     "sampah": {
-      "sampah-menumpuk-tidak-diangkut": [
+      "tips-sampah-menumpuk-tidak-diangkut": [
         "Simpan sampah rumah tangga dalam wadah tertutup rapat",
         "Gunakan sarung tangan dan masker jika harus menangani sampah sendiri",
         "Pisahkan sampah organik dan anorganik untuk mengurangi bau dan hama",
         "Laporkan kondisi ke dinas kebersihan setempat"
       ],
-      "sungai-tersumbat-sampah": [
+      "tips-sungai-tersumbat-sampah": [
         "Hindari masuk ke sungai yang tersumbat atau berarus deras",
         "Jauhkan anak-anak dari area sungai",
         "Pindahkan barang dari daerah rawan banjir",
         "Koordinasikan kegiatan bersih sungai melalui komunitas resmi"
       ],
-      "sampah-b3-dibuang-sembarangan": [
+      "tips-sampah-b3-dibuang-sembarangan": [
         "Jangan menyentuh atau memindahkan sampah B3",
         "Jauhkan warga dari lokasi dan beri tanda peringatan",
         "Laporkan ke dinas lingkungan hidup atau pihak berwenang",
@@ -97,18 +97,18 @@
   },
   "tips_darurat": {
     "listrik": {
-      "pemadaman-listrik": [
+      "tips-pemadaman-listrik-darurat": [
         "Pastikan keselamatan penghuni terutama lansia dan anak-anak",
         "Gunakan lampu darurat berbasis baterai",
         "Matikan peralatan listrik berdaya besar",
         "Hubungi layanan PLN jika pemadaman disertai percikan atau bau terbakar"
       ],
-      "kabel-listrik-di-jalan-mengganggu": [
+      "tips-kabel-listrik-di-jalan-mengganggu-darurat": [
         "Segera evakuasi orang dari sekitar kabel",
         "Jangan menyentuh benda logam yang bersentuhan dengan kabel",
         "Hubungi PLN atau layanan darurat"
       ],
-      "kebakaran-akibat-listrik": [
+      "tips-kebakaran-akibat-listrik": [
         "Evakuasi segera dan hubungi pemadam kebakaran (113)",
         "Putuskan listrik hanya jika aman",
         "Gunakan APAR non-air jika tersedia",
@@ -116,34 +116,34 @@
       ]
     },
     "air": {
-      "air-tidak-mengalir": [
+      "tips-air-tidak-mengalir-darurat": [
         "Prioritaskan penggunaan air untuk minum dan sanitasi dasar",
         "Gunakan sumber air darurat resmi",
         "Laporkan jika gangguan berlangsung lama"
       ],
-      "kualitas-air-buruk": [
+      "tips-kualitas-air-buruk-darurat": [
         "Hentikan penggunaan air untuk konsumsi",
         "Gunakan air kemasan atau bantuan air bersih resmi",
         "Segera cari pertolongan medis jika muncul gejala keracunan"
       ],
-      "kebocoran-pipa-distribusi": [
+      "tips-kebocoran-pipa-distribusi-darurat": [
         "Jauhi area genangan besar",
         "Evakuasi jika terjadi amblesan tanah",
         "Laporkan segera ke penyedia layanan air"
       ]
     },
     "sampah": {
-      "sampah-menumpuk-tidak-diangkut": [
+      "tips-sampah-menumpuk-tidak-diangkut-darurat": [
         "Jaga jarak dari tumpukan sampah besar",
         "Gunakan alat pelindung jika terpaksa menangani",
         "Laporkan kondisi berisiko kesehatan"
       ],
-      "sungai-tersumbat-sampah": [
+      "tips-sungai-tersumbat-sampah-darurat": [
         "Evakuasi jika terjadi banjir mendadak",
         "Jauhkan warga dari arus deras",
         "Ikuti arahan petugas"
       ],
-      "sampah-b3-dibuang-sembarangan": [
+      "tips-sampah-b3-dibuang-sembarangan-darurat": [
         "Isolasi area dan larang akses",
         "Hubungi dinas lingkungan hidup atau BPBD",
         "Segera evakuasi jika tercium bau menyengat atau asap"

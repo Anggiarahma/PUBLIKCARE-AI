@@ -27,79 +27,79 @@ def get_tips_for_condition(kategori_layanan, jenis_masalah, darurat):
     # LISTRIK - Pemadaman listrik
     # ============================================
     if kategori_layanan == "listrik" and jenis_masalah == "pemadaman-listrik" and not darurat:
-        tips_list = tips_dict.get(jenis_masalah)
+        tips_list = tips_dict.get("tips-pemadaman-listrik")
 
     elif kategori_layanan == "listrik" and jenis_masalah == "pemadaman-listrik" and darurat:
-        tips_list = tips_darurat_dict.get(jenis_masalah)
+        tips_list = tips_darurat_dict.get("tips-pemadaman-listrik-darurat")
     
     # ============================================
     # LISTRIK - Kabel listrik di jalan mengganggu
     # ============================================
     elif kategori_layanan == "listrik" and jenis_masalah == "kabel-listrik-di-jalan-mengganggu" and not darurat:
-        tips_list = tips_dict.get(jenis_masalah)
+        tips_list = tips_dict.get("tips-kabel-listrik-di-jalan-mengganggu")
 
     elif kategori_layanan == "listrik" and jenis_masalah == "kabel-listrik-di-jalan-mengganggu" and darurat:
-        tips_list = tips_darurat_dict.get(jenis_masalah)
+        tips_list = tips_darurat_dict.get("tips-kabel-listrik-di-jalan-mengganggu-darurat")
         
     # ============================================
     # LISTRIK - Kebakaran akibat listrik
     # ============================================
     elif kategori_layanan == "listrik" and jenis_masalah == "kebakaran-akibat-listrik":
-        tips_list = tips_darurat_dict.get(jenis_masalah)
+        tips_list = tips_darurat_dict.get("tips-kebakaran-akibat-listrik")
     
     # ============================================
     # AIR - Air tidak mengalir
     # ============================================
     elif kategori_layanan == "air" and jenis_masalah == "air-tidak-mengalir" and not darurat:
-        tips_list = tips_dict.get(jenis_masalah)
+        tips_list = tips_dict.get("tips-air-tidak-mengalir")
         
     elif kategori_layanan == "air" and jenis_masalah == "air-tidak-mengalir" and darurat:
-        tips_list = tips_darurat_dict.get(jenis_masalah)
+        tips_list = tips_darurat_dict.get("tips-air-tidak-mengalir-darurat")
     
     # ============================================
     # AIR - Kualitas air buruk
     # ============================================
     elif kategori_layanan == "air" and jenis_masalah == "kualitas-air-buruk" and not darurat:
-        tips_list = tips_dict.get(jenis_masalah)
+        tips_list = tips_dict.get("tips-kualitas-air-buruk")
 
     elif kategori_layanan == "air" and jenis_masalah == "kualitas-air-buruk" and darurat:
-        tips_list = tips_darurat_dict.get(jenis_masalah)
+        tips_list = tips_darurat_dict.get("tips-kualitas-air-buruk-darurat")
            
     # ============================================
     # AIR - Kebocoran pipa distribusi
     # ============================================
     elif kategori_layanan == "air" and jenis_masalah == "kebocoran-pipa-distribusi" and not darurat:
-        tips_list = tips_dict.get(jenis_masalah)
+        tips_list = tips_dict.get("tips-kebocoran-pipa-distribusi")
  
     elif kategori_layanan == "air" and jenis_masalah == "kebocoran-pipa-distribusi" and darurat:
-        tips_list = tips_darurat_dict.get(jenis_masalah)    
+        tips_list = tips_darurat_dict.get("tips-kebocoran-pipa-distribusi-darurat")    
     
     # ============================================
     # SAMPAH - Sampah menumpuk tidak diangkut
     # ============================================
     elif kategori_layanan == "sampah" and jenis_masalah == "sampah-menumpuk-tidak-diangkut" and not darurat:
-        tips_list = tips_dict.get(jenis_masalah)
+        tips_list = tips_dict.get("tips-sampah-menumpuk-tidak-diangkut")
 
     elif kategori_layanan == "sampah" and jenis_masalah == "sampah-menumpuk-tidak-diangkut" and darurat:
-        tips_list = tips_darurat_dict.get(jenis_masalah)
+        tips_list = tips_darurat_dict.get("tips-sampah-menumpuk-tidak-diangkut-darurat")
     
     # ============================================
     # SAMPAH - Sungai tersumbat sampah
     # ============================================
     elif kategori_layanan == "sampah" and jenis_masalah == "sungai-tersumbat-sampah" and not darurat:
-        tips_list = tips_dict.get(jenis_masalah)
+        tips_list = tips_dict.get("tips-sungai-tersumbat-sampah")
 
     elif kategori_layanan == "sampah" and jenis_masalah == "sungai-tersumbat-sampah" and darurat:
-        tips_list = tips_darurat_dict.get(jenis_masalah)
+        tips_list = tips_darurat_dict.get("tips-sungai-tersumbat-sampah-darurat")
     
     # ============================================
     # SAMPAH - Sampah B3 dibuang sembarangan
     # ============================================
     elif kategori_layanan == "sampah" and jenis_masalah == "sampah-b3-dibuang-sembarangan" and not darurat:
-        tips_list = tips_dict.get(jenis_masalah)
+        tips_list = tips_dict.get("tips-sampah-b3-dibuang-sembarangan")
 
     elif kategori_layanan == "sampah" and jenis_masalah == "sampah-b3-dibuang-sembarangan" and darurat:
-        tips_list = tips_darurat_dict.get(jenis_masalah)
+        tips_list = tips_darurat_dict.get("tips-sampah-b3-dibuang-sembarangan-darurat")
     
     return tips_list
 
